@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import {  Text ,View } from 'react-native';
 
-// import { SplashScreen , ScreenContainer } from '@bm-mas-global-components';
-// import  LoginComponent  from './components/LoginComponent';
+import { SplashScreen , ScreenContainer } from '@bm-mas-global-components';
+import  LoginComponent  from './components/LoginComponent';
 
 
 class LoginScreen extends Component {
@@ -36,12 +35,11 @@ class LoginScreen extends Component {
 
   render() {
     return (
-      <View style={{flex:1, backgroundColor:'blue'}}>
-       <Text>mas-expo</Text>
-       <Text>mas-expo</Text>
-       <Text>mas-expo</Text>
-       <Text>mas-expo</Text>
-      </View>
+      <ScreenContainer {...this.props}>
+        { this.state.fontLoaded ? (
+          <LoginComponent {...this.props} validateUserLogIn={this.validateUserLogIn} />
+        ) : <SplashScreen /> }
+      </ScreenContainer>
       );
 
   }

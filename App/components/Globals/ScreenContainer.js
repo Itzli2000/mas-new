@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { ScrollView, ImageBackground, View, } from 'react-native';
-import { ApplicationStyles as styles, Images } from '@bm-mas-themes';
+import { ApplicationStyles as styles, Images } from '@bm-mas-themes/ApplicationStyles';
 import { LinearGradient } from 'expo';
 
 class ScreenContainer extends Component {

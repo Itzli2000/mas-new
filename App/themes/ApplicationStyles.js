@@ -167,6 +167,7 @@ export const ApplicationStyles =  StyleSheet.create({
   // ScreenContainer Component Styles
   screenContainer: {
     flex: 1,
+    width: '100%',
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',

@@ -22,7 +22,6 @@ class LoginComponent extends Component {
 
 
   render() {
-        console.warn('styles',styles);
     const { navigation } = this.props;
     return (
         <ScrollView contentContainerStyle={styles.loginScrollViewContainer}>

@@ -34,6 +34,7 @@ export const loginStyles =  StyleSheet.create({
 	},
 	loginScrollViewContainer: {
 		flexGrow: 0,
+		width: '100%',
 		minHeight: '100%',
 		justifyContent: 'center',
 	},
