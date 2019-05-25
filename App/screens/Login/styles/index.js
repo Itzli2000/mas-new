@@ -108,7 +108,7 @@ export const loginStyles =  StyleSheet.create({
 		borderColor: 'transparent',
 	},
 	loginFormInputs: {
-		fontSize:15,
+		fontSize:20,
 		lineHeight:15,
 		fontFamily: 'gotham-medium',
 		color: Colors.orangeText,
