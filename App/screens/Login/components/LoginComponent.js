@@ -1,8 +1,7 @@
 // 1ro importar react y/o componentes nativos
 import React, { Component } from 'react';     
-import {  View, Image,  Text,  ScrollView } from 'react-native';
-// 2do importar librerias de terceros 
-import { Button } from 'react-native-elements';
+import {  View, Image,  Text,  ScrollView, TouchableOpacity } from 'react-native';
+// 2do importar librerias de terceros
 // 3ro importar componentes en caso de tener children
 import LoginForm from './LoginForm';
 import CheckOptions from './CheckOptions';
@@ -27,7 +26,13 @@ class LoginComponent extends Component {
               ¿Olvidaste tu contraseña?
             </Text>
             <CheckOptions/>
-            <Button title='Entrar' onPress={()=>this.props.validateUserLogIn()} buttonStyle={styles.loginButton} />
+            <TouchableOpacity activeOpacity = { .5 } onPress={()=>{console.log('Logged')}}>
+              <View 
+               style={styles.loginButton} 
+              >
+               <Text style={styles.loginButtonText}>entrar</Text>
+              </View>
+            </TouchableOpacity>
           </View>
         </ScrollView>
     );
