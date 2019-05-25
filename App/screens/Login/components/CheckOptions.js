@@ -22,7 +22,7 @@ class CheckOptions extends Component {
       <View> 
         <View style={styles.checkOptionContainer} >
           <Switch
-            value={true}
+            value={false}
             onValueChange={(val) => console.log(val)}
             disabled={false}
             circleSize={14}
