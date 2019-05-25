@@ -1,15 +1,9 @@
 // 1ro importar react y/o componentes nativos
 import React, { Component } from 'react';
 import { View,  Text } from 'react-native';
-
 // 2do importar librerias de terceros 
 import { Switch } from 'react-native-switch';
-
-import { Colors } from '@bm-mas-themes'; // <--- esta referencia no debe de ir aquí, debe de ser referenciada en styles del componente y creada como clase. 
-
 // 3ro importar componentes en caso de tener children
-
-
 // 4to importar styles
 import { loginStyles as styles } from './../styles';
 
@@ -28,10 +22,10 @@ class CheckOptions extends Component {
             circleSize={14}
             barHeight={17}
             circleBorderWidth={0}
-            backgroundActive={Colors.orange}
-            backgroundInactive={Colors.inactive}
-            circleActiveColor={Colors.white} 
-            circleInActiveColor={Colors.black}
+            backgroundActive={styles.colorOrange.color}
+            backgroundInactive={styles.colorInactive.color}
+            circleActiveColor={styles.colorWhite.color}
+            circleInActiveColor={styles.colorBlack.color}
             changeValueImmediately={true}
             changeValueImmediately={true}
             switchLeftPx={2}
@@ -51,10 +45,10 @@ class CheckOptions extends Component {
             circleSize={14}
             barHeight={17}
             circleBorderWidth={0}
-            backgroundActive={Colors.orange}
-            backgroundInactive={Colors.inactive}
-            circleActiveColor={Colors.white} 
-            circleInActiveColor={Colors.black}
+            backgroundActive={styles.colorOrange.color}
+            backgroundInactive={styles.colorInactive.color}
+            circleActiveColor={styles.colorWhite.color}
+            circleInActiveColor={styles.colorBlack.color}
             changeValueImmediately={true}
             changeValueImmediately={true}
             switchLeftPx={2}

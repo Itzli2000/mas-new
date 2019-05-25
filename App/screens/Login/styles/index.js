@@ -3,7 +3,7 @@
 import {  StyleSheet } from 'react-native';
 
 //2do importar themes
-import { Colors, Metrics } from '@bm-mas-themes';
+import { Colors, Metrics, Images } from '@bm-mas-themes';
 
 
 export const loginStyles =  StyleSheet.create({
@@ -17,6 +17,7 @@ export const loginStyles =  StyleSheet.create({
 		alignItems: 'center',
 		justifyContent: 'center',
 		marginBottom: 20,
+		paddingTop: 12,
 	},
 	checkOptionInlineText: {
 		width: '70%',
@@ -114,6 +115,11 @@ export const loginStyles =  StyleSheet.create({
 		textAlign: 'center', 
 		backgroundColor: 'transparent',
 		overflow: 'hidden'
-	}
-	
+	},
+	loginLogo: Images.logo,
+	colorOrange: {color: Colors.orange},
+	colorInactive: {color:Colors.inactive},
+	colorWhite: {color:Colors.white},
+	colorBlack: {color:Colors.black},
+	colorOrangeText: {color:Colors.orangeText},
 });

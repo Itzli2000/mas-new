@@ -1,4 +1,4 @@
-const images = {
+const Images = {
     logo: require('@bm-mas-images/logo.png'),
     inputBack: require('@bm-mas-images/inputBack.png'),
     location: require('@bm-mas-images/location.png'),
@@ -11,4 +11,4 @@ const images = {
     // arrow: require('./../images/arrow.png'), no existe el el proyecto
 }
 
-export default images
+export default Images
