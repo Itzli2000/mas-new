@@ -1,5 +1,3 @@
-'use strict';
-
 import React, { Component } from 'react';
 import { View, Image, TouchableOpacity, ScrollView, Text, Dimensions } from 'react-native';
 import moment from "moment";
@@ -25,6 +23,7 @@ class UserCard extends Component {
 
 	render() {
 		const{ props } = this;
+		console.log(this);
     	const { children, backColor } = props;
 		return (
 		  <View style={{flex: 1, minHeight: screenHeight}}>

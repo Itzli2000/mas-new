@@ -1,5 +1,3 @@
-'use strict';
-
 import React, { Component } from 'react';
 import { View, Image, TouchableOpacity, ScrollView, Text, Dimensions } from 'react-native';
 // import { LinearGradient }  from 'expo-linear-gradient';

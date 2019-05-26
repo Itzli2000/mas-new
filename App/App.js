@@ -2,7 +2,8 @@ import React,  { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import Routes  from "./navigation/AppNavigator";
-import LoginScreen  from "./screens/Login";
+import LoginScreen  from "@bm-mas-screens/Login";
+import HomeScreen  from "@bm-mas-screens/Home";
 
 export class App extends Component {
   constructor(props) {
@@ -13,7 +14,7 @@ export class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <LoginScreen />
+        <HomeScreen />
       </View>
     );
   }

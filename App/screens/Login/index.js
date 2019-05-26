@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import { SplashScreen , ScreenContainer } from '@bm-mas-global-components';
 import  LoginComponent  from './components/LoginComponent';
 
