@@ -1,7 +1,6 @@
-'use strict';
 import React, { Component } from 'react';
 import {  View, Text, Image, TouchableOpacity } from 'react-native';
-import { ApplicationStyles as styles, Colors, Images } from './../Themes';
+import { CardComponentStyles as styles } from './../styles';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { LinearGradient } from 'expo';
 
@@ -21,11 +20,11 @@ class CardComponent extends Component {
         <TouchableOpacity activeOpacity = { .5 } onPress={()=>{this.props.navigation.navigate(navigate ? navigate : 'Encuestas')}}>
           <LinearGradient
               style={[styles.screenBackImage, styles.cardBackgorund]}
-              colors={[(startColor ? startColor : Colors.greenStart), (endColor ? endColor : Colors.greenStop)]}
+              colors={[(startColor ? startColor : styles.greenStart), (endColor ? endColor : styles.greenStop)]}
             >
               <View style={[styles.cardBodyStyle, styles.cardTitleContainer]}>
                 <Text h4 style={styles.cardTitleStyles}>{title.toUpperCase()}</Text>
-                {!icon && <Image style={styles.cardTitleIcon} source={Images.menuIcon} />}
+                {!icon && <Image style={styles.cardTitleIcon} source={styles.menuIconImage} />}
                 {icon && <View style={ styles.cardTitleIconElem}><Icon name={icon} style={{color: (iconColor ? iconColor : 'black')}}/></View> }
               </View>
               <View style={[styles.cardBodyStyle]}>

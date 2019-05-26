@@ -1,42 +1,195 @@
-
-// 1ro importar react y/o componentes nativos
 import {  StyleSheet } from 'react-native';
-
-//2do importar themes
 import { Colors, Metrics, Images } from '@bm-mas-themes';
 
-export const CardComponent =  StyleSheet.create({
-
-    
-	
+export const CardComponentStyles =  StyleSheet.create({
+  cardContainer: {
+    flex: 1,
+    backgroundColor: 'transparent',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 20,
+    marginBottom: 20,
+  },
+  cardContainerStyle: {
+    maxWidth: 450,
+    width: '90%',
+    borderRadius: 15,
+    overflow: 'hidden',
+    justifyContent: 'center',
+    alignItems: 'center',
+    minHeight: 150,
+  },
+  fullCardContainer: {
+    flex: 1,
+    backgroundColor: 'transparent',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 10,
+  },
+  fullCardContainerStyle: {
+    maxWidth: 650,
+    width: '100%',
+    borderRadius: 0,
+    overflow: 'hidden',
+    justifyContent: 'center',
+    alignItems: 'center',
+    minHeight: 130,
+    marginTop: 20,
+  },
+  cardBackgorund: {
+    justifyContent: 'center',
+  },
+  cardTitleContainer: {
+    justifyContent: 'space-around',
+    alignItems: 'center',
+  },
+  cardTitleIcon: {
+    resizeMode: 'contain',
+    width: (Metrics.screenWidth <= 600 ? 27 : 32),
+    height: (Metrics.screenWidth <= 600 ? 27 : 32),
+  },
+  cardTitleIconElem: {
+    width: (Metrics.screenWidth <= 600 ? 30 : 36),
+    height: (Metrics.screenWidth <= 600 ? 30 : 36),
+    borderRadius: (Metrics.screenWidth <= 600 ? 15 : 18),
+    fontSize: 18,
+    overflow:'hidden',
+    backgroundColor: Colors.white,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  fullCardTitleContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 40,
+    marginTop:20,
+  },
+  cardIconStyles: {
+    paddingLeft:15,
+    color: Colors.white,
+    fontSize: (Metrics.screenWidth <= 600 ? 23 : 30),
+  },
+  cardTitleStyles: {
+    paddingLeft:10,
+    fontFamily: 'gotham-bold',
+    color: Colors.white,
+    fontSize: (Metrics.screenWidth <= 600 ? 17 : 25),
+    height: 30,
+    lineHeight: 30,
+  },
+  cardBodyStyle: {
+    padding: 10,
+    width: '100%',
+    flex: 1,
+    flexDirection: 'row',
+    flexWrap: 'nowrap',
+    justifyContent: 'flex-end',
+  },
+  fullCardBody: {
+    fontSize: 17,
+    fontFamily: 'gotham-bold',
+    alignItems: 'center',
+    justifyContent: 'center',
+    color: Colors.white
+  },
+  greenStart: {color:Colors.greenStart},
+  greenStop: {color:Colors.greenStop},
+  menuIconImage: Images.menuIcon,
 });
 
+export const CategoriesSelectorStyles =  StyleSheet.create({
 
-
-export const CategoriesSelector =  StyleSheet.create({
-
-	
-	
 });
 
+export const FullCardComponentStyles =  StyleSheet.create({
+  fullCardContainer: {
+    flex: 1,
+    backgroundColor: 'transparent',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 10,
+  },
+  fullCardContainerStyle: {
+    maxWidth: 650,
+    width: '100%',
+    borderRadius: 0,
+    overflow: 'hidden',
+    justifyContent: 'center',
+    alignItems: 'center',
+    minHeight: 130,
+    marginTop: 20,
+  },
 
-
-
-export const FullCardComponent =  StyleSheet.create({
-
-	
-	
+  fullCardTitleContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 40,
+    marginTop:20,
+  },
+  cardIconStyles: {
+    paddingLeft:15,
+    color: Colors.white,
+    fontSize: (Metrics.screenWidth <= 600 ? 23 : 30),
+  },
+  cardTitleStyles: {
+    paddingLeft:10,
+    fontFamily: 'gotham-bold',
+    color: Colors.white,
+    fontSize: (Metrics.screenWidth <= 600 ? 17 : 25),
+    height: 30,
+    lineHeight: 30,
+  },
+  cardBodyStyle: {
+    padding: 10,
+    width: '100%',
+    flex: 1,
+    flexDirection: 'row',
+    flexWrap: 'nowrap',
+    justifyContent: 'flex-end',
+  },
+  fullCardBody: {
+    fontSize: 17,
+    fontFamily: 'gotham-bold',
+    alignItems: 'center',
+    justifyContent: 'center',
+    color: Colors.white
+  },
+  screenBackImage: {
+    width: '100%', 
+    height: '100%',
+  },
+  greenStart: {color:Colors.greenStart},
+  greenStop: {color:Colors.greenStop},
 });
 
+export const NotificationsCardStyles =  StyleSheet.create({
 
-
-
-export const NotificationsCard =  StyleSheet.create({
-
-	
-	
 });
 
+export const ScreenContainerStyles =  StyleSheet.create({
+
+});
+
+export const SignatureStyles =  StyleSheet.create({
+
+});
+
+export const SplashScreenStyles =  StyleSheet.create({
+
+});
+
+export const SubcategoriesSelectorStyles =  StyleSheet.create({
+
+});
+
+export const TransparentCardStyles =  StyleSheet.create({
+
+});
 
 export const UserCardStyles =  StyleSheet.create({
   screenWidth: {
