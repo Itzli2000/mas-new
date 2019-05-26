@@ -1,7 +1,6 @@
-'use strict';
 import React, { Component } from 'react';
-import {  View, Text, Image, TouchableOpacity } from 'react-native';
-import { ApplicationStyles as styles, Colors, Images } from './../Themes';
+import {  View, TouchableOpacity } from 'react-native';
+import { SignatureStyles as styles } from './../styles';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { LinearGradient } from 'expo';
 
@@ -21,7 +20,7 @@ class SignatureCard extends Component {
         <TouchableOpacity activeOpacity = { .5 } onPress={()=>{this.props.navigation.navigate(navigate ? navigate : 'Encuestas')}}>
           <LinearGradient
               style={[styles.screenBackImage, styles.cardBackgorund]}
-              colors={[(startColor ? startColor : Colors.greenStart), (endColor ? endColor : Colors.greenStop)]}
+              colors={[(startColor ? startColor : styles.start.color), (endColor ? endColor : styles.stop.color)]}
             >
               <View style={[styles.SignatureBodyStyle]}>
                 <Icon name="pencil" style={ styles.SignatureIconElem}/>

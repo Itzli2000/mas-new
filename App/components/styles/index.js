@@ -101,7 +101,54 @@ export const CardComponentStyles =  StyleSheet.create({
 });
 
 export const CategoriesSelectorStyles =  StyleSheet.create({
-
+  categoriePickerButton:{ 
+    width: (Metrics.screenWidth <= 600 ? 150 : 200), 
+    color: 'white',
+    fontSize: (Metrics.screenWidth <= 600 ? 15 : 20),
+    padding: 5,
+    paddingLeft: 15,
+    alignItems: 'center',
+  },
+  categorieFloatSection:{
+    width:'100%',
+    height:'100%',
+    position:'absolute',
+    zIndex: 100,
+    backgroundColor: Colors.menuBackground,
+    opacity: 0.9,
+    alignItems: 'center',
+  },
+  categorieHeaderText: {
+    color: Colors.white,
+    fontSize: 20,
+    marginLeft: 7,
+    width: '40%',
+  },
+  CategorieHide: {
+    right:'-120%',
+  },
+  CategorieShow: {
+    right:0,
+  },
+  categoriesLinks:{
+    color: Colors.white,
+    paddingTop:7,
+    paddingBottom:7,
+    marginLeft: 'auto',
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    width: (Metrics.screenWidth <= 600 ? 190 : 250),
+    marginRight: 10,
+  },
+  categoriesLinksText: {
+    fontSize: (Metrics.screenWidth <= 600 ? 20 : 25),
+    color: Colors.white,
+    width: '100%',
+    flexWrap: 'wrap',
+    borderColor: 'transparent',
+    borderBottomColor: Colors.white,
+    borderWidth: 1,
+  },
 });
 
 export const FullCardComponentStyles =  StyleSheet.create({
@@ -168,15 +215,112 @@ export const FullCardComponentStyles =  StyleSheet.create({
 });
 
 export const NotificationsCardStyles =  StyleSheet.create({
-
+  fullCardContainer: {
+    flex: 1,
+    backgroundColor: 'transparent',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 10,
+  },
+  fullCardContainerStyle: {
+    maxWidth: 650,
+    width: '100%',
+    borderRadius: 0,
+    overflow: 'hidden',
+    justifyContent: 'center',
+    alignItems: 'center',
+    minHeight: 130,
+    marginTop: 20,
+  },
+  cardIconStyles: {
+    paddingLeft:15,
+    color: Colors.white,
+    fontSize: (Metrics.screenWidth <= 600 ? 23 : 30),
+  },
+  cardTitleStyles: {
+    paddingLeft:10,
+    fontFamily: 'gotham-bold',
+    color: Colors.white,
+    fontSize: (Metrics.screenWidth <= 600 ? 17 : 25),
+    height: 30,
+    lineHeight: 30,
+  },
+  cardBodyStyle: {
+    padding: 10,
+    width: '100%',
+    flex: 1,
+    flexDirection: 'row',
+    flexWrap: 'nowrap',
+    justifyContent: 'flex-end',
+  },
+  screenBackImage: {
+    width: '100%', 
+    height: '100%',
+  },
+  greenStart: {color:Colors.greenStart},
+  greenStop: {color:Colors.greenStop},
 });
 
 export const ScreenContainerStyles =  StyleSheet.create({
-
+  screenContainer: {
+    flex: 1,
+    width: '100%',
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+    minHeight: Metrics.screenHeight,
+  },
+  screenBackImage: {
+    width: '100%', 
+    height: '100%',
+  },
+  start:{color: Colors.middleWhite},
+  stop: {color: Colors.userCardStop},
 });
 
 export const SignatureStyles =  StyleSheet.create({
-
+  cardContainer: {
+    flex: 1,
+    backgroundColor: 'transparent',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 20,
+    marginBottom: 20,
+  },
+  cardContainerStyle: {
+    maxWidth: 450,
+    width: '90%',
+    borderRadius: 15,
+    overflow: 'hidden',
+    justifyContent: 'center',
+    alignItems: 'center',
+    minHeight: 150,
+  },
+  screenBackImage: {
+    width: '100%', 
+    height: '100%',
+  },
+  cardBackgorund: {
+    justifyContent: 'center',
+  },
+  SignatureBodyStyle: {
+    padding: 10,
+    width: '100%',
+    flexDirection: 'row',
+    flexWrap: 'nowrap',
+    justifyContent: 'flex-end',
+  },
+  SignatureIconElem: {
+    position: 'absolute',
+    fontSize: 25,
+    color: Colors.white,
+    top: 10,
+    left: 13,
+  },
+  start: {color:Colors.greenStart},
+  stop: {color:Colors.greenStop},
 });
 
 export const SplashScreenStyles =  StyleSheet.create({
@@ -184,11 +328,149 @@ export const SplashScreenStyles =  StyleSheet.create({
 });
 
 export const SubcategoriesSelectorStyles =  StyleSheet.create({
-
+  column:{
+    flexDirection: 'column',
+  },
+  row:{
+    flexDirection: 'row',
+    width:'100%',
+    alignItems: 'center',
+  },
+  centered: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  categoriesLinks:{
+    color: Colors.white,
+    paddingTop:7,
+    paddingBottom:7,
+    marginLeft: 'auto',
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    width: (Metrics.screenWidth <= 600 ? 190 : 250),
+    marginRight: 10,
+  },
+  categoriesLinksText: {
+    fontSize: (Metrics.screenWidth <= 600 ? 20 : 25),
+    color: Colors.white,
+    width: '100%',
+    flexWrap: 'wrap',
+    borderColor: 'transparent',
+    borderBottomColor: Colors.white,
+    borderWidth: 1,
+  },
+  menuIconsContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: (Metrics.screenWidth <= 600 ? 30 : 40),
+    height: (Metrics.screenWidth <= 600 ? 30 : 40),
+  },
+  menuIcons:{
+    fontSize: (Metrics.screenWidth <= 600 ? 17 : 25),
+    color: Colors.white,
+  },
+  categoriesLinksText: {
+    fontSize: (Metrics.screenWidth <= 600 ? 20 : 25),
+    color: Colors.white,
+    width: '100%',
+    flexWrap: 'wrap',
+    borderColor: 'transparent',
+    borderBottomColor: Colors.white,
+    borderWidth: 1,
+  },
+  cardfloatMenuData: {
+    width: '85%',
+    minWidth: (Metrics.screenWidth <= 600 ? 200 : 400),
+    maxWidth: (Metrics.screenWidth <= 600 ? 300 : 500),
+    overflow: 'hidden',
+  },
+  imageCaptureHeader: {
+    backgroundColor: Colors.black,
+    paddingTop: 10,
+    paddingBottom: 10,
+  },
+  categorieHeaderText: {
+    color: Colors.white,
+    fontSize: 20,
+    marginLeft: 7,
+    width: '40%',
+  },
+  searchBarContainer: {
+    backgroundColor: 'transparent', 
+    borderWidth: 0, 
+    borderBottomColor: 'transparent', 
+    width: '60%', 
+    borderTopColor: 'transparent'
+  },
+  searchInputContainer: {
+    backgroundColor: 'rgba(255,255,255,1)', 
+    borderWidth: 0, 
+    borderColor: 'transparent', 
+    borderRadius: 10, 
+    marginLeft: 'auto', 
+    marginRight: 'auto'
+  },
 });
 
 export const TransparentCardStyles =  StyleSheet.create({
-
+  transparentCardContainer: {
+    width: '100%',
+    marginTop: 20,
+  },
+  transparentCardContainerStyle: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderBottomColor: Colors.blackTransparent,
+    borderBottomWidth: 2,
+    borderRadius: 0,
+  },
+  transparentCardTitleContainer: {
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'flex-start',
+    alignSelf: 'center',
+    width: '100%',
+    maxWidth: 400,
+    minHeight: 40,
+  },
+  transparentcardTitleStyles: {
+    paddingLeft:50,
+    fontFamily: 'gotham-bold',
+    color: Colors.black,
+    fontSize: (Metrics.screenWidth <= 600 ? 17 : 25),
+  },
+  transparentcardSubtitleStyles: {
+    paddingLeft:50,
+    fontFamily: 'gotham-bold',
+    color: Colors.black,
+    fontSize: (Metrics.screenWidth <= 600 ? 15 : 20),
+  },
+  transparentCardIconStyles: {
+    position: 'absolute',
+    top: 0,
+    left: 15,
+    color: Colors.black,
+    fontSize: (Metrics.screenWidth <= 600 ? 30 : 45),
+  },
+  transparentCardBody: {
+    fontSize: 17,
+    fontFamily: 'gotham-bold',
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+    color: Colors.black,
+    margin: 0,
+  },
+  transparentCardColumn: {
+    width: '45%',
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+  },
+  screenBackImage: {
+    width: '100%', 
+    height: '100%',
+  },
 });
 
 export const UserCardStyles =  StyleSheet.create({

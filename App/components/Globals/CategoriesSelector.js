@@ -1,9 +1,6 @@
-'use strict';
-
 import React, { Component } from 'react';
-import { ApplicationStyles as styles, Images, Colors, Metrics } from './../Themes';
-import { LinearGradient } from 'expo';
-import { View, Image, TouchableOpacity, ScrollView, Text } from 'react-native';
+import { View, TouchableOpacity, ScrollView, Text } from 'react-native';
+import { CategoriesSelectorStyles as styles } from './../styles';
 import { SearchBar  } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 

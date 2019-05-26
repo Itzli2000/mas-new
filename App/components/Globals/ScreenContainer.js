@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { ScrollView, ImageBackground, View, } from 'react-native';
-import { ApplicationStyles as styles, Images } from '@bm-mas-themes/ApplicationStyles';
+import { View } from 'react-native';
+import { ScreenContainerStyles as styles } from './../styles';
 import { LinearGradient } from 'expo';
 
 class ScreenContainer extends Component {
@@ -15,7 +15,7 @@ class ScreenContainer extends Component {
       <View style={styles.screenContainer}>
         <LinearGradient
           style={styles.screenBackImage}
-          colors={['#fbfcfe', '#466ea5']}>
+          colors={[styles.start.color, styles.stop.color]}>
           {children}
         </LinearGradient>
 

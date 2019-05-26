@@ -1,7 +1,7 @@
 import React,  { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-import {Routes}  from "./navigation/AppNavigator.js";
+import {AppNavigation}  from "./navigation/AppNavigator.js";
 import LoginScreen  from "@bm-mas-screens/Login";
 import HomeScreen  from "@bm-mas-screens/Home";
 

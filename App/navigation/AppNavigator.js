@@ -18,6 +18,6 @@ const AuthRoutes = createStackNavigator({
   },
 });
 
-const Routes = createAppContainer(AuthRoutes);
+const AppNavigation = createAppContainer(AuthRoutes);
 
-export {Routes};
+export {AppNavigation};

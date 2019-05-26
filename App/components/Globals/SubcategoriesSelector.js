@@ -1,9 +1,6 @@
-'use strict';
-
 import React, { Component } from 'react';
-import { ApplicationStyles as styles, Images, Colors, Metrics } from './../Themes';
-import { LinearGradient } from 'expo';
-import { View, Image, TouchableOpacity, ScrollView, Text } from 'react-native';
+import { SubcategoriesSelectorStyles as styles } from './../styles';
+import { View, TouchableOpacity, ScrollView, Text } from 'react-native';
 import { SearchBar  } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
@@ -15,7 +12,6 @@ class SubcategoriesSelector extends Component {
       search: '',
     };
   }
-
 
   renderCategoriesList = (data) => {
     return  data.map((item, index) => {
@@ -43,8 +39,8 @@ class SubcategoriesSelector extends Component {
           <View style={[styles.row, styles.centered, styles.imageCaptureHeader]}>
             <Text style={styles.categorieHeaderText}>Selecciona una categoría</Text>
               <SearchBar
-                containerStyle={{backgroundColor: 'transparent', borderWidth: 0, borderBottomColor: 'transparent', width: '60%', borderTopColor: 'transparent'}}
-                inputContainerStyle={{backgroundColor: 'rgba(255,255,255,1)', borderWidth: 0, borderColor: 'transparent', borderRadius: 10, marginLeft: 'auto', marginRight: 'auto'}}
+                containerStyle={styles.searchBarContainer}
+                inputContainerStyle={styles.searchInputContainer}
                 placeholder="Categoría"
                 onChangeText={this.updateSearch}
                 value={this.state.search}

@@ -69,23 +69,6 @@ export const ApplicationStyles =  StyleSheet.create({
   pbDefault:{
     paddingBottom:20,
   },
-  // Card Component Styles
-  // ScreenContainer Component Styles
-  screenContainer: {
-    flex: 1,
-    width: '100%',
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-    minHeight: Metrics.screenHeight,
-  },
-  screenBackImage: {
-    width: '100%', 
-    height: '100%',
-  },
-  // Float Menu styles
-  // User card styles
-
   // Home screen component styles
   homeCardIconPicker: {
     resizeMode: 'contain',
@@ -231,60 +214,6 @@ export const ApplicationStyles =  StyleSheet.create({
   },
   // Full card transparent styles
   
-  transparentCardContainer: {
-    width: '100%',
-    marginTop: 20,
-  },
-  transparentCardContainerStyle: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderBottomColor: Colors.blackTransparent,
-    borderBottomWidth: 2,
-    borderRadius: 0,
-  },
-  transparentCardTitleContainer: {
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'flex-start',
-    alignSelf: 'center',
-    width: '100%',
-    maxWidth: 400,
-    minHeight: 40,
-  },
-  transparentcardTitleStyles: {
-    paddingLeft:50,
-    fontFamily: 'gotham-bold',
-    color: Colors.black,
-    fontSize: (Metrics.screenWidth <= 600 ? 17 : 25),
-  },
-  transparentcardSubtitleStyles: {
-    paddingLeft:50,
-    fontFamily: 'gotham-bold',
-    color: Colors.black,
-    fontSize: (Metrics.screenWidth <= 600 ? 15 : 20),
-  },
-  transparentCardIconStyles: {
-    position: 'absolute',
-    top: 0,
-    left: 15,
-    color: Colors.black,
-    fontSize: (Metrics.screenWidth <= 600 ? 30 : 45),
-  },
-  transparentCardBody: {
-    fontSize: 17,
-    fontFamily: 'gotham-bold',
-    alignItems: 'flex-start',
-    justifyContent: 'center',
-    color: Colors.black,
-    margin: 0,
-  },
-  transparentCardColumn: {
-    width: '45%',
-    flexDirection: 'column',
-    justifyContent: 'flex-start',
-  },
   // Visit screen styles
   visitButton: {
     width: 100,
@@ -540,20 +469,6 @@ export const ApplicationStyles =  StyleSheet.create({
     paddingLeft:15,
   },
   // Signature styles
-  SignatureBodyStyle: {
-    padding: 10,
-    width: '100%',
-    flexDirection: 'row',
-    flexWrap: 'nowrap',
-    justifyContent: 'flex-end',
-  },
-  SignatureIconElem: {
-    position: 'absolute',
-    fontSize: 25,
-    color: Colors.white,
-    top: 10,
-    left: 13,
-  },
   SignatureLine: {
     marginTop: 7,
     marginBottom: 7,
@@ -725,52 +640,4 @@ export const ApplicationStyles =  StyleSheet.create({
     marginBottom: 30,
   },
   // Float categorie selector stiles
-  categoriePickerButton:{ 
-    width: (Metrics.screenWidth <= 600 ? 150 : 200), 
-    color: 'white',
-    fontSize: (Metrics.screenWidth <= 600 ? 15 : 20),
-    padding: 5,
-    paddingLeft: 15,
-    alignItems: 'center',
-  },
-  categorieFloatSection:{
-    width:'100%',
-    height:'100%',
-    position:'absolute',
-    zIndex: 100,
-    backgroundColor: Colors.menuBackground,
-    opacity: 0.9,
-    alignItems: 'center',
-  },
-  categorieHeaderText: {
-    color: Colors.white,
-    fontSize: 20,
-    marginLeft: 7,
-    width: '40%',
-  },
-  CategorieHide: {
-    right:'-120%',
-  },
-  CategorieShow: {
-    right:0,
-  },
-  categoriesLinks:{
-    color: Colors.white,
-    paddingTop:7,
-    paddingBottom:7,
-    marginLeft: 'auto',
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-    width: (Metrics.screenWidth <= 600 ? 190 : 250),
-    marginRight: 10,
-  },
-  categoriesLinksText: {
-    fontSize: (Metrics.screenWidth <= 600 ? 20 : 25),
-    color: Colors.white,
-    width: '100%',
-    flexWrap: 'wrap',
-    borderColor: 'transparent',
-    borderBottomColor: Colors.white,
-    borderWidth: 1,
-  },
 });
