@@ -1,0 +1,103 @@
+import {  StyleSheet } from 'react-native';
+import { Colors, Metrics } from './../../../themes';
+
+export const ChatStyles = {
+  userCardfloatMenu:{
+    width:'100%',
+    height:'100%',
+    position:'absolute',
+    zIndex: 100,
+    backgroundColor: Colors.menuBackground,
+    opacity: 0.9,
+    alignItems: 'center',
+  },
+  MenuHide: {
+    left:'-120%',
+  },
+  MenuShow: {
+    left:0,
+  },
+  chatContainer: {
+    flex: 1,
+    backgroundColor: Colors.white,
+    textAlign: 'center',
+    justifyContent: 'space-between',
+  },
+  chatView: {
+    height: Metrics.screenHeight / 2,
+    width: '90%',
+    marginLeft: '5%',
+    marginRight: '5%',
+  },
+  auxChat: {
+    width: '100%',
+    maxWidth: 250,
+    minHeight: 50,
+    borderRadius: 10,
+    backgroundColor: Colors.greenStart,
+    marginLeft: 20,
+    marginRight: 'auto',
+    padding: 7,
+    marginTop: 5,
+    marginBottom: 5,
+  },
+  arrowAux: {
+    position: 'absolute',
+    top: 0,
+    left: -15,
+  },
+  userChat: {
+    width: '100%',
+    maxWidth: 250,
+    minHeight: 50,
+    borderRadius: 10,
+    backgroundColor: Colors.userCardStart,
+    marginRight: 20,
+    marginLeft: 'auto',
+    padding: 7,
+    marginTop: 5,
+    marginBottom: 5,
+  },
+  arrowUser: {
+    position: 'absolute',
+    top: 0,
+    right: -15,
+  },
+  auxChatText: {
+    color: Colors.white,
+  },
+  userChatText: {
+    color: Colors.white,
+  },
+  chatInputContainer: {
+    flexDirection: 'row',
+    width:'100%',
+    justifyContent: (Metrics.screenWidth <= 600 ? 'space-around' : 'center'),
+    alignItems: 'center',
+    backgroundColor: Colors.orangeStart,
+    marginTop: 10,
+  },
+  newChatInput: {
+    backgroundColor: Colors.white,
+    height: 80,
+    width: 200,
+    borderRadius: 10,
+    margin: 15,
+    padding: 10,
+  },
+  chatButton: {
+    width: 100,
+    height: 40,
+    margin: 'auto',
+    alignSelf: 'center',
+    backgroundColor: Colors.userCardStart,
+    borderWidth: 1,
+    borderRadius: 10,
+    paddingLeft: 10,
+    paddingRight: 10,
+    marginTop: 20,
+    marginBottom: 30,
+  },
+  userStart: { color: Colors.userCardStart },
+  start: { color:Colors.greenStart },
+};

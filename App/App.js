@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import {AppNavigation}  from "./navigation/AppNavigator.js";
 import LoginScreen  from "@bm-mas-screens/Login";
 import HomeScreen  from "@bm-mas-screens/Home";
+import ChatScreen  from "@bm-mas-screens/Chat";
 
 export class App extends Component {
   constructor(props) {
@@ -14,7 +15,7 @@ export class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <HomeScreen />
+        <ChatScreen />
       </View>
     );
   }

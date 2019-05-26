@@ -1,10 +1,7 @@
-'use strict';
 import React, { Component } from 'react';
-import ScreenContainer from './../../components/ScreenContainer';
+import { ScreenContainer } from '@bm-mas-global-components';
 import ChatComponent from './components/ChatComponent';
-import {
-  Text,
-} from 'react-native';
+import { Text } from 'react-native';
 
 class ChatScreen extends Component {
   constructor(props) {
@@ -30,9 +27,9 @@ class ChatScreen extends Component {
 
   async componentWillMount() {
     await Expo.Font.loadAsync({
-      'gotham-regular': require('./../../fonts/GothamBook.otf'),
-      'gotham-medium': require('./../../fonts/GothamMedium.ttf'),
-      'gotham-bold': require('./../../fonts/GothamBold.ttf'),
+      'gotham-regular': require('./../../assets/fonts/GothamBook.otf'),
+      'gotham-medium': require('./../../assets/fonts/GothamMedium.ttf'),
+      'gotham-bold': require('./../../assets/fonts/GothamBold.ttf'),
     });
     this.setState({ fontLoaded: true });
   }

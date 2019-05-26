@@ -1,17 +1,9 @@
 import React, { Component } from 'react'; 
-import CardComponent from './../../../components/CardComponent';
-import UserCard from './../../../components/UserCard';
-import UserMenu from './../../../components/UserMenu';
-import { ApplicationStyles as styles, Images, Colors } from './../../../Themes';
+import { CardComponent, UserMenu, UserCard } from '@bm-mas-global-components';
+import { ChatStyles as styles } from './../styles';
 import Triangle from 'react-native-triangle';
 import { Button } from 'react-native-elements';
-import {
-  View,
-  TextInput,
-  TouchableOpacity,
-  ScrollView,
-  Text,
-} from 'react-native';
+import { View, TextInput, ScrollView, Text } from 'react-native';
 
 const chatData = [
   {
@@ -82,7 +74,7 @@ class ChatComponent extends Component {
                       style={item.userChat === 'user' ? styles.arrowUser : styles.arrowAux}
                       width={30}
                       height={15}
-                      color={item.userChat === 'user' ? Colors.userCardStart : Colors.greenStart}
+                      color={item.userChat === 'user' ? styles.userStart.color : styles.start.color}
                       direction={item.userChat === 'user' ? 'down' : 'down'}
                     />
                   </View>

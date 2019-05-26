@@ -523,7 +523,7 @@ export const UserCardStyles =  StyleSheet.create({
     backgroundColor: Colors.menuBackground,
     opacity: 0.9,
     alignItems: 'center',
-  },
+  }, 
   userCardPhotoContainer:{
     width: (Metrics.screenWidth <= 600 ? 110 : 130),
     height: (Metrics.screenWidth <= 600 ? 110 : 130),
