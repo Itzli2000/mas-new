@@ -243,11 +243,10 @@ export const UserCardStyles =  StyleSheet.create({
     alignItems: 'center',
   },
   userCardPhotoContainer:{
-    width: (Metrics.screenWidth <= 600 ? '35%' : '20%'),
-    height: (Metrics.screenWidth <= 600 ? 100 : 120),
+    width: (Metrics.screenWidth <= 600 ? 110 : 130),
+    height: (Metrics.screenWidth <= 600 ? 110 : 130),
     justifyContent:'center',
     alignItems: 'center',
-    borderRadius: (Metrics.screenWidth <= 600 ? 50 : 70),
     marginLeft: 20,
   },
   userCardDataContainer:{
