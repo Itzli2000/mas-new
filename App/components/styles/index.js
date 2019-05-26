@@ -329,6 +329,8 @@ export const UserMenu =  StyleSheet.create({
   },
   cardfloatMenuData: {
     width: '100%',
+    minWidth: (Metrics.screenWidth <= 600 ? 200 : 400),
+    maxWidth: (Metrics.screenWidth <= 600 ? 220 : 500),
   },
   menuUserData:{
     paddingTop: 10,

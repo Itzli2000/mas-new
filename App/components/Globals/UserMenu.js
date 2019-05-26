@@ -107,6 +107,7 @@ class UserMenu extends Component {
 
   render() {
     const {props} = this;
+    console.log(styles.screenWidth);
     return (
       <View style={[styles.column, styles.cardfloatMenuData]}>
         <ScrollView> 
