@@ -116,7 +116,7 @@ class UserMenu extends Component {
                 style={styles.menuUserPhoto}
                 resizeMode='cover'
                 borderRadius={(styles.screenWidth.width <= 600 ? 40 : 50)}
-                source={styles.userDem}
+                source={styles.userDemo}
                 />
             </View>
             <View style={[styles.column, styles.menuUserDataContainer]}>

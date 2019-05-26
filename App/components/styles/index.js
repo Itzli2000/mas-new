@@ -39,14 +39,16 @@ export const NotificationsCard =  StyleSheet.create({
 
 
 export const UserCardStyles =  StyleSheet.create({
-  flex: {
-    flex: 1
-  },
   screenWidth: {
     width: Metrics.screenWidth,
   },
   screenHeight: {
-    width: Metrics.screenHeight,
+    height: Metrics.screenHeight,
+  },
+  mainScrollContainer:{
+    backgroundColor:Colors.white,
+    marginTop: (Metrics.screenWidth <= 600 ? 80 : 100),
+    position: 'relative',
   },
   row:{
     flexDirection: 'row',
@@ -70,6 +72,13 @@ export const UserCardStyles =  StyleSheet.create({
     left: 0,
     right: 0,
     backgroundColor: Colors.userCardStart,
+  },
+  menuIconContainer:{
+    width: (Metrics.screenWidth <= 600 ? 40 : 50), 
+    height: (Metrics.screenWidth <= 600 ? 40 : 50),
+    marginRight: 10,
+    marginRight: 'auto',
+    marginLeft: 10,
   },
   userCardfloatMenu:{
     width:'100%',
@@ -149,7 +158,7 @@ export const UserMenu =  StyleSheet.create({
     width: Metrics.screenWidth,
   },
   screenHeight: {
-    width: Metrics.screenHeight,
+    height: Metrics.screenHeight,
   },
   row:{
     flexDirection: 'row',
@@ -166,15 +175,7 @@ export const UserMenu =  StyleSheet.create({
     left:0,
   },
   cardfloatMenuData: {
-    flex: 1,
     width: '100%',
-  },
-  menuIconContainer:{
-    width: (Metrics.screenWidth <= 600 ? 40 : 50), 
-    height: (Metrics.screenWidth <= 600 ? 40 : 50),
-    marginRight: 10,
-    marginRight: 'auto',
-    marginLeft: 10,
   },
   menuUserData:{
     paddingTop: 10,

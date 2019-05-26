@@ -4,11 +4,7 @@ import { FullCardComponent, UserMenu, UserCard } from '@bm-mas-global-components
 import ProgressCircle from 'react-native-progress-circle';
 import { HomeStyles as styles } from './../styles';
 
-import {
-  View,
-  Text,
-  Dimensions
-} from 'react-native';
+import { View, Text, Dimensions } from 'react-native';
 
 
 const tasks=[

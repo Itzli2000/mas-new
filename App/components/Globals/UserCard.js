@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Image, TouchableOpacity, ScrollView, Text, Dimensions } from 'react-native';
+import { View, Image, TouchableOpacity, ScrollView, Text } from 'react-native';
 import moment from "moment";
 import 'moment/locale/es';
 import { LinearGradient }  from 'expo';
@@ -20,7 +20,7 @@ class UserCard extends Component {
 		const{ props } = this;
     const { children, backColor } = props;
 		return (
-		  <View style={[styles.screenHeight, styles.flex]}>
+		  <View style={[styles.screenHeight.height, {flex:1}]}>
 			  <View style={[styles.row, styles.topIcons]}>
 				  <TouchableOpacity style={styles.menuIconContainer} activeOpacity = { .5 } onPress={()=>this.props.toogleMenu()}>
 					  <Image
@@ -51,32 +51,32 @@ class UserCard extends Component {
 					  />
 				  </TouchableOpacity>
 			  </View>
-	        <ScrollView style={styles.mainScrollContainer} contentContainerStyle={styles.mainScrollContent}>
-				   <View style={{backgroundColor: (backColor ?  backColor : ' transparent '), flex: 1}}>
-				   	 <LinearGradient
-				          colors={[styles.userCardStart.color, styles.userCardStop.color]}
-				        >
-							<View style={styles.userCardTopBar}>
-								<View style={[styles.row, styles.pbDefault]}>
-									<View style={[styles.column, styles.userCardPhotoContainer]}>
-										<Image 
-											style={styles.userCardPhoto}
-											resizeMode='cover'
-											borderRadius={styles.screenWidth <= 600 ? 50 : 60}
-											source={styles.userDemoImage}
-											/>
-									</View>
-									<View style={[styles.column, styles.userCardDataContainer]}>
-										<Text style={styles.userCardDate}>{moment().format('dddd LL')}</Text>
-										<Text h3 style={styles.userCardUserSubtitle}>Bienvenido</Text>
-										<Text h3 style={styles.userCardUserName}>Carlos Morales</Text>
-									</View>
+        <ScrollView style={styles.mainScrollContainer} contentContainerStyle={styles.mainScrollContent}>
+			   <View style={{backgroundColor: (backColor ?  backColor : ' transparent '), flex: 1}}>
+			   	 <LinearGradient
+			          colors={[styles.userCardStart.color, styles.userCardStop.color]}
+			        >
+						<View style={styles.userCardTopBar}>
+							<View style={[styles.row, styles.pbDefault]}>
+								<View style={[styles.column, styles.userCardPhotoContainer]}>
+									<Image 
+										style={styles.userCardPhoto}
+										resizeMode='cover'
+										borderRadius={styles.screenWidth <= 600 ? 50 : 60}
+										source={styles.userDemoImage}
+										/>
+								</View>
+								<View style={[styles.column, styles.userCardDataContainer]}>
+									<Text style={styles.userCardDate}>{moment().format('dddd LL')}</Text>
+									<Text h3 style={styles.userCardUserSubtitle}>Bienvenido</Text>
+									<Text h3 style={styles.userCardUserName}>Carlos Morales</Text>
 								</View>
 							</View>
-						</LinearGradient>
-						{children}
-				   </View>
-		      </ScrollView>
+						</View>
+					</LinearGradient>
+					{children}
+			   </View>
+	      </ScrollView>
 		  </View>
 		);
 	}
