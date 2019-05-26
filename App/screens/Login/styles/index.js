@@ -7,7 +7,6 @@ import { Colors, Metrics, Images } from '@bm-mas-themes';
 
 
 export const loginStyles =  StyleSheet.create({
-
 	checkOptionContainer: {
 		width: '100%',
 		margin: 'auto',

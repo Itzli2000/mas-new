@@ -2,16 +2,13 @@ import React, { Component } from 'react';
 import AnimatedBar from "react-native-animated-bar";
 import { FullCardComponent, UserMenu, UserCard } from '@bm-mas-global-components';
 import ProgressCircle from 'react-native-progress-circle';
-import { HomeStyles as styles } from './../styles/styles';
-import { ApplicationStyles as generalStyles, Colors } from './../../../themes';
+import { HomeStyles as styles } from './../styles';
 
 import {
   View,
   Text,
   Dimensions
 } from 'react-native';
-
-const screenWidth = Dimensions.get('window').width;
 
 
 const tasks=[
@@ -71,8 +68,8 @@ class HomeComponent extends Component {
             key={index} 
             icon={item.icon}
             title={item.key}
-            startColor={Colors.userCardStart}
-            stopColor={Colors.userCardStop}
+            startColor={styles.userCardStart.color}
+            stopColor={styles.userCardStop.color}
           >
             <View style={[styles.homeCardInnerColumn, styles.homeCardInnerColumnLeft]}>
                <Text style={styles.homeCardBody}>{'  '}{item.description}</Text>
@@ -80,7 +77,7 @@ class HomeComponent extends Component {
             <View style={[styles.homeCardInnerColumn, styles.homeCardInnerColumnRight]}>
               <ProgressCircle
                 percent={item.percentage}
-                radius={screenWidth <= 600 ? 35 : 45}
+                radius={styles.screenWidth.width <= 600 ? 35 : 45}
                 borderWidth={10}
                 color="#3399FF" 
                 shadowColor="#cacbce"
@@ -101,8 +98,8 @@ class HomeComponent extends Component {
             key={index} 
             icon={item.icon}
             title={item.key}
-            startColor={Colors.orangeStart}
-            stopColor={Colors.orangeStop}
+            startColor={styles.orangeStart.color}
+            stopColor={styles.orangeStop.color}
           >
             <View style={[styles.homeCardInnerColumn, styles.homeCardInnerColumnLeft]}>
                <Text style={styles.homeCardBody}>{'  '}{item.description}</Text>
@@ -113,7 +110,7 @@ class HomeComponent extends Component {
                 height={10}
                 borderColor="#DDD"
                 fillColor="tomato"
-                barColor={Colors.white}
+                barColor={styles.white.color}
                 borderRadius={5}
               />
             </View>           
@@ -124,9 +121,9 @@ class HomeComponent extends Component {
 
   render() { 
     return (
-        <UserCard userCardData={()=>this.renderUserCardData()}>
-          <View style={[generalStyles.userCardfloatMenu, this.props.localState.menu ? generalStyles.MenuShow : generalStyles.MenuHide]}>
-            <UserMenu></UserMenu>
+        <UserCard  {...this.props} userCardData={()=>this.renderUserCardData()}>
+          <View style={[styles.userCardfloatMenu, this.props.localState.menu ? styles.MenuShow : styles.MenuHide]}>
+            <UserMenu {...this.props}></UserMenu>
           </View>
           <View>
             {this.renderTaskList(tasks)}

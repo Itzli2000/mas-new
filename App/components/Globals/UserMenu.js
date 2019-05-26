@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
-import { View, Image, TouchableOpacity, ScrollView, Text, Dimensions } from 'react-native';
-// import { LinearGradient }  from 'expo-linear-gradient';
+import { View, Image, TouchableOpacity, ScrollView, Text } from 'react-native';
 import { LinearGradient }  from 'expo';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { ApplicationStyles as styles, Colors, Images } from '@bm-mas-themes';
-
-const screenWidth = Dimensions.get('window').width;
+import { UserMenu as styles } from './../styles';
 
 const menuItems=[
     {
@@ -118,8 +115,8 @@ class UserMenu extends Component {
               <Image 
                 style={styles.menuUserPhoto}
                 resizeMode='cover'
-                borderRadius={(screenWidth <= 600 ? 40 : 50)}
-                source={Images.userDemo}
+                borderRadius={(styles.screenWidth.width <= 600 ? 40 : 50)}
+                source={styles.userDem}
                 />
             </View>
             <View style={[styles.column, styles.menuUserDataContainer]}>
