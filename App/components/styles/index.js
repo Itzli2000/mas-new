@@ -624,11 +624,10 @@ export const UserMenu =  StyleSheet.create({
     marginLeft: '3%',
   },
   menuUserPhotoContainer: {
-    width: (Metrics.screenWidth <= 600 ? 80 : 100),
-    height: (Metrics.screenWidth <= 600 ? 80 : 100),
+    width: (Metrics.screenWidth <= 600 ? 70 : 100),
+    height: (Metrics.screenWidth <= 600 ? 70 : 100),
     justifyContent:'center',
     alignItems: 'center',
-    borderRadius: 50,
     overflow: 'hidden',
   },
   menuUserPhoto: {
@@ -643,14 +642,14 @@ export const UserMenu =  StyleSheet.create({
   },
   menuUserUserName: {
     marginTop: (Metrics.screenWidth <= 600 ? 10 : 15),
-    fontSize: (Metrics.screenWidth <= 600 ? 20 : 25),
+    fontSize: (Metrics.screenWidth <= 600 ? 22 : 25),
     color: Colors.white,
-    textAlign: 'right',
-    fontFamily: 'gotham-bold',
+    textAlign: 'left',
+    fontFamily: 'gotham-regular',
   },
   menuUserUserSubtitle: {
     marginTop: (Metrics.screenWidth <= 600 ? 7 : 10),
-    fontSize: (Metrics.screenWidth <= 600 ? 14 : 19),
+    fontSize: (Metrics.screenWidth <= 600 ? 10 : 19),
     color: Colors.white,
     textAlign: 'right',
     fontFamily: 'gotham-bold',

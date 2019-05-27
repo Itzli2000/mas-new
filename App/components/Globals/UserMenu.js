@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, Image, TouchableOpacity, ScrollView, Text } from 'react-native';
+import {Collapse,CollapseHeader, CollapseBody, AccordionList} from 'accordion-collapse-react-native';
 import { LinearGradient }  from 'expo';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { UserMenu as styles } from './../styles';
@@ -116,7 +117,7 @@ class UserMenu extends Component {
               <Image 
                 style={styles.menuUserPhoto}
                 resizeMode='cover'
-                borderRadius={(styles.screenWidth.width <= 600 ? 40 : 50)}
+                borderRadius={(styles.screenWidth.width <= 600 ? 35 : 50)}
                 source={styles.userDemo}
                 />
             </View>
@@ -126,7 +127,21 @@ class UserMenu extends Component {
             </View>
           </View>
           <View>{this.renderMenuList(menuItems, 1)}</View>
-          <View style={styles.menuListBottom}>{this.renderMenuList(menuBottom, 2)}</View>
+          <Collapse>
+              <CollapseHeader>
+                <View 
+                 style={styles.menuLinks} 
+                >
+                 <View style={styles.menuIconsContainer}>
+                   <Icon name='pencil' style={styles.menuIcons}/> 
+                 </View>
+                 <Text style={styles.menuLinksText}> Sesión</Text>
+                </View>
+              </CollapseHeader>
+              <CollapseBody>
+                <View style={styles.menuListBottom}>{this.renderMenuList(menuBottom, 2)}</View>
+              </CollapseBody>
+          </Collapse>
         </ScrollView>
       </View>
     );
