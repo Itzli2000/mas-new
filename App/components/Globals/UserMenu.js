@@ -127,7 +127,7 @@ class UserMenu extends Component {
             </View>
           </View>
           <View>{this.renderMenuList(menuItems, 1)}</View>
-          <Collapse>
+          <Collapse style={styles.collapsibleMenu}>
               <CollapseHeader>
                 <View 
                  style={styles.menuLinks} 
