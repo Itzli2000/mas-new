@@ -9,7 +9,7 @@ export const ChatStyles = {
     zIndex: 100,
     backgroundColor: Colors.menuBackground,
     opacity: 0.9,
-    alignItems: 'center',
+    alignItems: 'flex-start',
   },
   MenuHide: {
     left:'-120%',

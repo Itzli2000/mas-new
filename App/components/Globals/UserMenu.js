@@ -127,6 +127,7 @@ class UserMenu extends Component {
             </View>
           </View>
           <View>{this.renderMenuList(menuItems, 1)}</View>
+        </ScrollView>
           <Collapse style={styles.collapsibleMenu}>
               <CollapseHeader>
                 <View 
@@ -142,7 +143,6 @@ class UserMenu extends Component {
                 <View style={styles.menuListBottom}>{this.renderMenuList(menuBottom, 2)}</View>
               </CollapseBody>
           </Collapse>
-        </ScrollView>
       </View>
     );
   }

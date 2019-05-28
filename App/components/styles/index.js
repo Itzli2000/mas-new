@@ -561,15 +561,20 @@ export const UserCardStyles =  StyleSheet.create({
     fontFamily: 'gotham-bold',
   },
   userCardMenuIcon: {
-    resizeMode: 'contain',
-    width: '100%', 
-    height: '100%',
+    fontSize: (Metrics.screenWidth <= 600 ? 45 : 60),
+    color: Colors.white,
   },
   userCardImageLogo: {
     resizeMode: 'contain',
     width: (Metrics.screenWidth <= 600 ? 60 : 70),
     height: (Metrics.screenWidth <= 600 ? 60 : 70),
     marginRight: 10,
+  },
+  cardTitleIconElem: {
+    width: (Metrics.screenWidth <= 600 ? 45 : 60),
+    height: (Metrics.screenWidth <= 600 ? 45 : 60),
+    marginRight: 10,
+    marginLeft: 10,
   },
   userCardNavIcon: {
     resizeMode: 'contain',
@@ -609,12 +614,9 @@ export const UserMenu =  StyleSheet.create({
     left:0,
   },
   cardfloatMenuData: {
-    left: 0,
-    position: 'absolute',
     marginLeft: (Metrics.screenWidth <= 380 ? 20 : 30),
     minWidth: (Metrics.screenWidth <= 600 ? 200 : 400),
     maxWidth: (Metrics.screenWidth <= 600 ? 300 : 500),
-    overflow: 'hidden',
   },
   menuUserData:{
     paddingTop: 15,
@@ -697,7 +699,7 @@ export const UserMenu =  StyleSheet.create({
     marginTop: (Metrics.screenWidth <= 600 ? 5 : 15),
   },
   collapsibleMenu: {
-    marginBottom: 100,
+    marginBottom: 10,
   },
   userDemo: Images.userDemo,
 });

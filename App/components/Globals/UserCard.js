@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, Image, TouchableOpacity, ScrollView, Text } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import moment from "moment";
 import 'moment/locale/es';
 import { LinearGradient }  from 'expo';
@@ -22,11 +23,8 @@ class UserCard extends Component {
 		return (
 		  <View style={[styles.screenHeight.height, {flex:1}]}>
 			  <View style={[styles.row, styles.topIcons]}>
-				  <TouchableOpacity style={styles.menuIconContainer} activeOpacity = { .5 } onPress={()=>this.props.toogleMenu()}>
-					  <Image
-					  style={styles.userCardMenuIcon}
-					  source={styles.menuIconImage}
-					  />
+				  <TouchableOpacity style={styles.cardTitleIconElem} activeOpacity = { .5 } onPress={()=>this.props.toogleMenu()}>
+					  <Icon name='bars' style={styles.userCardMenuIcon}/>
 				  </TouchableOpacity>
 				  <TouchableOpacity activeOpacity = { .5 } onPress={()=>this.props.navigation.navigate('Home')}>
 					  <Image
