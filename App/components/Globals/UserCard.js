@@ -26,7 +26,7 @@ class UserCard extends Component {
 				  <TouchableOpacity style={styles.cardTitleIconElem} activeOpacity = { .5 } onPress={()=>this.props.toogleMenu()}>
 					  <Icon name='bars' style={styles.userCardMenuIcon}/>
 				  </TouchableOpacity>
-				  <TouchableOpacity activeOpacity = { .5 } onPress={()=>this.props.navigation.navigate('Home')}>
+				  <TouchableOpacity style={{marginLeft: 'auto'}} activeOpacity = { .5 } onPress={()=>this.props.navigation.navigate('Home')}>
 					  <Image
 					  style={styles.userCardImageLogo}
 					  source={styles.logoImage}

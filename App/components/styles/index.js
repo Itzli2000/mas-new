@@ -482,7 +482,7 @@ export const UserCardStyles =  StyleSheet.create({
   },
   mainScrollContainer:{
     backgroundColor:Colors.white,
-    marginTop: (Metrics.screenWidth <= 600 ? 80 : 100),
+    marginTop: (Metrics.screenWidth <= 600 ? 70 : 100),
     position: 'relative',
   },
   row:{
@@ -501,8 +501,8 @@ export const UserCardStyles =  StyleSheet.create({
   },
   topIcons: {
     position: 'absolute',
-    height: (Metrics.screenWidth <= 600 ? 80 : 100),
-    paddingTop: (Metrics.screenWidth <= 600 ? 10 : 20),
+    height: (Metrics.screenWidth <= 600 ? 70 : 100),
+    paddingTop: (Metrics.screenWidth <= 600 ? 20 : 20),
     top: 0,
     left: 0,
     right: 0,
@@ -561,7 +561,7 @@ export const UserCardStyles =  StyleSheet.create({
     fontFamily: 'gotham-bold',
   },
   userCardMenuIcon: {
-    fontSize: (Metrics.screenWidth <= 600 ? 45 : 60),
+    fontSize: (Metrics.screenWidth <= 600 ? 38 : 50),
     color: Colors.white,
   },
   userCardImageLogo: {
@@ -569,17 +569,17 @@ export const UserCardStyles =  StyleSheet.create({
     width: (Metrics.screenWidth <= 600 ? 60 : 70),
     height: (Metrics.screenWidth <= 600 ? 60 : 70),
     marginRight: 10,
-  },
+  }, 
   cardTitleIconElem: {
-    width: (Metrics.screenWidth <= 600 ? 45 : 60),
-    height: (Metrics.screenWidth <= 600 ? 45 : 60),
+    width: (Metrics.screenWidth <= 600 ? 38 : 50),
+    height: (Metrics.screenWidth <= 600 ? 38 : 50),
     marginRight: 10,
     marginLeft: 10,
   },
   userCardNavIcon: {
     resizeMode: 'contain',
-    width: (Metrics.screenWidth <= 600 ? 45 : 60),
-    height: (Metrics.screenWidth <= 600 ? 45 : 60),
+    width: (Metrics.screenWidth <= 600 ? 38 : 50),
+    height: (Metrics.screenWidth <= 600 ? 38 : 50),
     marginRight: 10,
   },
   menuIconImage: Images.menuIcon,
