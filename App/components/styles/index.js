@@ -480,10 +480,25 @@ export const UserCardStyles =  StyleSheet.create({
   screenHeight: {
     height: Metrics.screenHeight,
   },
+  MenuHide: {
+    left:'-120%',
+  },
+  MenuShow: {
+    left:0,
+  },
+  fixScreen: {
+    maxHeight: Metrics.screenHeight,
+    overflow: 'hidden',
+    backgroundColor: 'red',
+  },
   mainScrollContainer:{
     backgroundColor:Colors.white,
     marginTop: (Metrics.screenWidth <= 600 ? 70 : 100),
     position: 'relative',
+  },
+  mainScrollContent:{
+    flexGrow: 0, 
+    justifyContent: 'flex-start'
   },
   row:{
     flexDirection: 'row',
@@ -517,8 +532,9 @@ export const UserCardStyles =  StyleSheet.create({
   },
   userCardfloatMenu:{
     width:'100%',
-    height:'100%',
+    height:(Metrics.screenWidth <= 600 ? Metrics.screenHeight - 70 : Metrics.screenHeight - 100),
     position:'absolute',
+    top: (Metrics.screenWidth <= 600 ? 70 : 100),
     zIndex: 100,
     backgroundColor: Colors.menuBackground,
     opacity: 0.9,

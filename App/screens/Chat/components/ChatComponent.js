@@ -1,5 +1,5 @@
 import React, { Component } from 'react'; 
-import { CardComponent, UserMenu, UserCard } from '@bm-mas-global-components';
+import { CardComponent, UserCard } from '@bm-mas-global-components';
 import { ChatStyles as styles } from './../styles';
 import Triangle from 'react-native-triangle';
 import { Button } from 'react-native-elements';
@@ -61,9 +61,6 @@ class ChatComponent extends Component {
   render() {
     return (
         <UserCard {...this.props} userCardData={()=>this.renderUserCardData()}>
-          <View style={[styles.userCardfloatMenu, this.props.localState.menu ? styles.MenuShow : styles.MenuHide]}>
-            <UserMenu {...this.props}></UserMenu>
-          </View>
           <View style={[styles.chatContainer]}>
             <View style={styles.chatView}>
               <ScrollView>

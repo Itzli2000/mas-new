@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AnimatedBar from "react-native-animated-bar";
-import { FullCardComponent, UserMenu, UserCard } from '@bm-mas-global-components';
+import { FullCardComponent, UserCard } from '@bm-mas-global-components';
 import ProgressCircle from 'react-native-progress-circle';
 import { HomeStyles as styles } from './../styles';
 
@@ -118,9 +118,6 @@ class HomeComponent extends Component {
   render() { 
     return (
         <UserCard  {...this.props} userCardData={()=>this.renderUserCardData()}>
-          <View style={[styles.userCardfloatMenu, this.props.localState.menu ? styles.MenuShow : styles.MenuHide]}>
-            <UserMenu {...this.props}></UserMenu>
-          </View>
           <View>
             {this.renderTaskList(tasks)}
             {this.renderPendingList(pending)}

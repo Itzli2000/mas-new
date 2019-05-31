@@ -9,19 +9,7 @@ class ChatScreen extends Component {
 
     this.state = {
       fontLoaded: false,
-      menu:false
     };
-  }
-
-  toogleMenu = () => {
-    if (this.state.menu === false)
-      this.setState({menu:true});
-    else
-      this.setState({menu:false});
-  }
-
-  hideMenu = () => {
-    this.setState({menu:false});
   }
 
 
@@ -41,9 +29,6 @@ class ChatScreen extends Component {
         { this.state.fontLoaded ? (
           <ChatComponent 
             {...this.props} 
-            hideMenu={this.hideMenu}
-            toogleMenu={this.toogleMenu} 
-            localState={this.state} 
           />
           ) : <Text >Loading....</Text> 
         }

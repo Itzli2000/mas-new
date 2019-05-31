@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, Image, TouchableOpacity, ScrollView, Text } from 'react-native';
+import { UserMenu } from '@bm-mas-global-components';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import moment from "moment";
 import 'moment/locale/es';
@@ -12,18 +13,31 @@ class UserCard extends Component {
 	constructor(props) {
 	  super(props);
 	
-	  this.state = {
-	  };
+    this.state = {
+      menu:false
+    };
 	}
+
+  toogleMenu = () => {
+    if (this.state.menu === false)
+      this.setState({menu:true});
+    else
+      this.setState({menu:false});
+  }
+
+  hideMenu = () => {
+    this.setState({menu:false});
+  }
 
 
 	render() {
 		const{ props } = this;
     const { children, backColor } = props;
+    console.log(this.state.menu, 'menu');
 		return (
-		  <View style={[styles.screenHeight.height, {flex:1}]}>
+		  <View style={[styles.screenHeight.height, {flex:1}, this.state.menu ? styles.fixScreen : '']}>
 			  <View style={[styles.row, styles.topIcons]}>
-				  <TouchableOpacity style={styles.cardTitleIconElem} activeOpacity = { .5 } onPress={()=>this.props.toogleMenu()}>
+				  <TouchableOpacity style={styles.cardTitleIconElem} activeOpacity = { .5 } onPress={()=>this.toogleMenu()}>
 					  <Icon name='bars' style={styles.userCardMenuIcon}/>
 				  </TouchableOpacity>
 				  <TouchableOpacity style={{marginLeft: 'auto'}} activeOpacity = { .5 } onPress={()=>this.props.navigation.navigate('Home')}>
@@ -49,6 +63,14 @@ class UserCard extends Component {
 					  />
 				  </TouchableOpacity>
 			  </View>
+        <View style={[styles.userCardfloatMenu, this.state.menu ? styles.MenuShow : styles.MenuHide]}>
+          <UserMenu 
+          	{...this.props}
+            hideMenu={this.hideMenu}
+            toogleMenu={this.toogleMenu} 
+            localState={this.state} 
+          />
+        </View>
         <ScrollView style={styles.mainScrollContainer} contentContainerStyle={styles.mainScrollContent}>
 			   <View style={{backgroundColor: (backColor ?  backColor : ' transparent '), flex: 1}}>
 			   	 <LinearGradient
