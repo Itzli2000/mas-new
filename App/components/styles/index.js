@@ -538,7 +538,8 @@ export const UserCardStyles =  StyleSheet.create({
     zIndex: 100,
     backgroundColor: Colors.menuBackground,
     opacity: 0.9,
-    alignItems: 'center',
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
   }, 
   userCardPhotoContainer:{
     width: (Metrics.screenWidth <= 600 ? 110 : 130),
@@ -631,7 +632,7 @@ export const UserMenu =  StyleSheet.create({
   },
   cardfloatMenuData: {
     marginLeft: (Metrics.screenWidth <= 380 ? 20 : 30),
-    minWidth: (Metrics.screenWidth <= 600 ? 200 : 400),
+    minWidth: (Metrics.screenWidth <= 600 ? 230 : 400),
     maxWidth: (Metrics.screenWidth <= 600 ? 300 : 500),
   },
   menuUserData:{
