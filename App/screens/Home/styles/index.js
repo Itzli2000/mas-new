@@ -6,14 +6,16 @@ export const HomeStyles =  StyleSheet.create({
 		flexDirection: 'column',
 		justifyContent: 'space-around',
 		alignItems: 'center',
-		paddingTop: 10,
-		paddingBottom: 10,
+		paddingTop: (Metrics.screenWidth <= 600 ? 5 : 15),
+		paddingBottom: (Metrics.screenWidth <= 600 ? 5 : 15),
 	},
 	homeCardInnerColumnLeft: {
 		width: '60%',
+    justifyContent: 'space-around',
 	},
 	homeCardInnerColumnRight: {
 		width: '40%',
+    justifyContent: 'space-around',
 	},
 	homeCardInnerFlatItem: {
 		padding: 5,
@@ -22,12 +24,18 @@ export const HomeStyles =  StyleSheet.create({
 		color: '#000',
 	},
 	homeCardBody: {
-		fontSize: 17,
+		fontSize: 15,
+    marginTop: 5,
+    marginBottom: 5,
 		fontFamily: 'gotham-bold',
 		alignItems: 'center',
 		justifyContent: 'center',
 		color: Colors.white
 	},
+  homeCardBodyProgress: {
+    marginTop: 5,
+    marginBottom: 5,
+  },
   userCardfloatMenu:{
     width:'100%',
     height:'100%',

@@ -33,6 +33,10 @@ const pending=[
     icon: 'clock-o',
     description: '5 visitas de 10 por día',
     percentage: 50,
+    description2: '5 visitas de 10 por día',
+    percentage2: 50,
+    description3: '5 visitas de 10 por día',
+    percentage3: 50,
   },
  ]
 
@@ -99,10 +103,29 @@ class HomeComponent extends Component {
           >
             <View style={[styles.homeCardInnerColumn, styles.homeCardInnerColumnLeft]}>
                <Text style={styles.homeCardBody}>{'  '}{item.description}</Text>
+               <Text style={styles.homeCardBody}>{'  '}{item.description2}</Text>
+               <Text style={styles.homeCardBody}>{'  '}{item.description3}</Text>
             </View>
             <View style={[styles.homeCardInnerColumn, styles.homeCardInnerColumnRight]}>
               <AnimatedBar
-                progress={this.state.progress}
+              style={styles.homeCardBodyProgress}
+                progress={item.percentage}
+                height={10}
+                borderColor="#DDD"
+                fillColor="tomato"
+                barColor={styles.white.color}
+                borderRadius={5}
+              />
+              <AnimatedBar
+                progress={item.percentage2}
+                height={10}
+                borderColor="#DDD"
+                fillColor="tomato"
+                barColor={styles.white.color}
+                borderRadius={5}
+              />
+              <AnimatedBar
+                progress={item.percentage3}
                 height={10}
                 borderColor="#DDD"
                 fillColor="tomato"
