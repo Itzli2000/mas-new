@@ -1,12 +1,12 @@
 'use strict';
 import React, { Component } from 'react';
 import { ScreenContainer } from '@bm-mas-global-components';
-import NotificationsComponent from './components/NotificationsComponent';
+import PriceListComponent from './components/PriceListComponent';
 import {
   Text,
 } from 'react-native';
 
-class NotificationsScreen extends Component {
+class PriceListScreen extends Component {
   constructor(props) {
     super(props);
 
@@ -14,6 +14,7 @@ class NotificationsScreen extends Component {
       fontLoaded: false,
     };
   }
+
 
   async componentWillMount() {
     await Expo.Font.loadAsync({
@@ -25,12 +26,13 @@ class NotificationsScreen extends Component {
     this.setState({ fontLoaded: true });
   }
 
+
   render() {
     return (
       <ScreenContainer {...this.props}>
         { this.state.fontLoaded ? (
-          <NotificationsComponent
-        {...this.props} 
+          <PriceListComponent
+            {...this.props} 
           />
           ) : <Text >Loading....</Text> 
         }
@@ -39,4 +41,4 @@ class NotificationsScreen extends Component {
   }
 }
 
-export default NotificationsScreen;
+export default PriceListScreen;
