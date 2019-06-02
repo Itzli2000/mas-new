@@ -7,6 +7,7 @@ import HomeScreen  from "@bm-mas-screens/Home";
 import ChatScreen  from "@bm-mas-screens/Chat";
 import ImageCaptureScreen  from "@bm-mas-screens/ImageCapture";
 import NewSignatureScreen  from "@bm-mas-screens/NewSignature";
+import NotificationsScreen  from "@bm-mas-screens/Notifications";
 
 export class App extends Component {
   constructor(props) {
@@ -17,7 +18,7 @@ export class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <NewSignatureScreen />
+        <NotificationsScreen />
       </View>
     );
   }
