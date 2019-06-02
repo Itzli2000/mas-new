@@ -6,6 +6,7 @@ import LoginScreen  from "@bm-mas-screens/Login";
 import HomeScreen  from "@bm-mas-screens/Home";
 import ChatScreen  from "@bm-mas-screens/Chat";
 import ImageCaptureScreen  from "@bm-mas-screens/ImageCapture";
+import NewSignatureScreen  from "@bm-mas-screens/NewSignature";
 
 export class App extends Component {
   constructor(props) {
@@ -16,7 +17,7 @@ export class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <ImageCaptureScreen />
+        <NewSignatureScreen />
       </View>
     );
   }

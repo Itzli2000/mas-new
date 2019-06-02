@@ -400,45 +400,6 @@ export const ApplicationStyles =  StyleSheet.create({
     fontSize:30,
   },
   // New signature styles
-  newSignatureContainer: {
-    height: '100%',
-    minHeight: 400,
-    borderTopLeftRadius: 40,
-    borderTopRightRadius: 40,
-    backgroundColor: Colors.greenStart,
-    textAlign: 'center',
-    margin: '5%',
-    marginBottom: 0,
-  },
-  newSignatureTitle : {
-    fontSize: 22,
-    textAlign: 'center',
-    color: Colors.white,
-    fontFamily: 'gotham-bold',
-    marginTop: 15,
-  },
-  newSignatureCanvas: {
-    width: '80%',
-    backgroundColor: Colors.white,
-    height: 130,
-    borderRadius: 10,
-    margin: 'auto',
-    marginTop: 10,
-    paddingLeft: 10,
-  },
-  newSignatureInput: {
-    width: '80%',
-    backgroundColor: Colors.white,
-    height: 30,
-    borderRadius: 10,
-    margin: 'auto',
-    marginTop: 10,
-    paddingLeft: 10,
-  },
-  newSignatureFooter: {
-    marginTop: 40,
-    marginBottom: 30,
-  },
   // Chat Styles
   // Float categorie selector stiles
 });
