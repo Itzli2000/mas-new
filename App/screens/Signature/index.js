@@ -29,14 +29,14 @@ class SignatureScreen extends Component {
   render() {
     return (
       <ScreenContainer {...this.props}>
-        { this.state.fontLoaded ? (
-          <SignatureComponent
+      { this.state.fontLoaded ? (
+        <SignatureComponent 
         {...this.props} 
-          />
-          ) : <Text >Loading....</Text> 
-        }
-      </ScreenContainer>
-      );
+        />
+        ) : <Text >Loading....</Text> 
+    }
+    </ScreenContainer>
+    );
   }
 }
 

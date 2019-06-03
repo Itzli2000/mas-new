@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {  View, TouchableOpacity } from 'react-native';
-import { SignatureStyles as styles } from './../styles';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { LinearGradient } from 'expo';
+import { SignatureStyles as styles } from './../styles';
 
 class SignatureCard extends Component {
   constructor(props) {
@@ -11,13 +11,14 @@ class SignatureCard extends Component {
 
   render() {
     const { props } = this;
-    const { children, title, navigate, icon, iconColor, startColor, endColor } = props;
+    console.log(props);
+    const { children, startColor, endColor } = props;
     return (
       <View style={styles.cardContainer}>
         <View
           style={styles.cardContainerStyle}
         >
-        <TouchableOpacity activeOpacity = { .5 } onPress={()=>{this.props.navigation.navigate(navigate ? navigate : 'Encuestas')}}>
+        <TouchableOpacity activeOpacity = { .5 }>
           <LinearGradient
               style={[styles.screenBackImage, styles.cardBackgorund]}
               colors={[(startColor ? startColor : styles.start.color), (endColor ? endColor : styles.stop.color)]}
