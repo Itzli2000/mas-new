@@ -1,4 +1,3 @@
-'use strict';
 import React, { Component } from 'react';
 import {  View, Text } from 'react-native';
 import { FullCardComponentStyles as styles } from './../styles';
@@ -12,7 +11,7 @@ class FullCardComponent extends Component {
   }
 
   render() {
-    const { children, startColor, stopColor } = this.props;
+    const { children, startColor, stopColor, type } = this.props;
     return (
       <View style={styles.fullCardContainer}>
         <View
@@ -22,11 +21,7 @@ class FullCardComponent extends Component {
               style={styles.screenBackImage}
               colors={[(startColor ? startColor : styles.greenStart.color), (stopColor ? stopColor : styles.greenStop.color)]}
             >
-              <View style={styles.fullCardTitleContainer}>
-                <Icon style={styles.cardIconStyles} name={this.props.icon} /> 
-                <Text h4 style={styles.cardTitleStyles}>{this.props.title.toUpperCase()}</Text>
-              </View>
-              <View style={styles.cardBodyStyle}>
+              <View style={type ? styles.cardBodyStyleColumn : styles.cardBodyStyleRow }>
                 {children}
               </View>
           </LinearGradient>

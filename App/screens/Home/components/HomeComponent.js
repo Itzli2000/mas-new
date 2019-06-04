@@ -4,6 +4,7 @@ import { FullCardComponent, UserCard } from '@bm-mas-global-components';
 import ProgressCircle from 'react-native-progress-circle';
 import { HomeStyles as styles } from './../styles';
 
+import Icon from 'react-native-vector-icons/FontAwesome';
 import { View, Text, Dimensions } from 'react-native';
 
 
@@ -61,7 +62,7 @@ class HomeComponent extends Component {
     }, 100);
   }
 
-  renderTaskList = (data) => {
+  renderTaskList = (data) => { //Render para grafica circular
     return  data.map((item, index) => {
       return (
           <FullCardComponent
@@ -72,6 +73,10 @@ class HomeComponent extends Component {
             stopColor={styles.userCardStop.color}
           >
             <View style={[styles.homeCardInnerColumn, styles.homeCardInnerColumnLeft]}>
+              <View style={styles.fullCardTitleContainer}>
+                <Icon style={styles.cardIconStyles} name={item.icon} /> 
+                <Text h4 style={styles.cardTitleStyles}>{item.key.toUpperCase()}</Text>
+              </View>
                <Text style={styles.homeCardBody}>{'  '}{item.description}</Text>
             </View>
             <View style={[styles.homeCardInnerColumn, styles.homeCardInnerColumnRight]}>
@@ -91,17 +96,23 @@ class HomeComponent extends Component {
     });
   }
 
-  renderPendingList = (data) => {
+  renderPendingList = (data) => {  //Render para listados
     return  data.map((item, index) => {
       return (
           <FullCardComponent
             key={index} 
+            type={'column'}
             icon={item.icon}
             title={item.key}
             startColor={styles.orangeStart.color}
             stopColor={styles.orangeStop.color}
           >
-            <View style={[styles.homeCardInnerColumn, styles.homeCardInnerColumnLeft]}>
+              <View style={[{width: '90%'}, styles.fullCardTitleContainer]}>
+                <Icon style={styles.cardIconStyles} name={item.icon} /> 
+                <Text h4 style={styles.cardTitleStyles}>{item.key.toUpperCase()}</Text>
+              </View>
+            <View style={{flexDirection:'row'}}>
+              <View style={[styles.homeCardInnerColumn, styles.homeCardInnerColumnLeft]}>
                <Text style={styles.homeCardBody}>{'  '}{item.description}</Text>
                <Text style={styles.homeCardBody}>{'  '}{item.description2}</Text>
                <Text style={styles.homeCardBody}>{'  '}{item.description3}</Text>
@@ -132,7 +143,8 @@ class HomeComponent extends Component {
                 barColor={styles.white.color}
                 borderRadius={5}
               />
-            </View>           
+            </View> 
+            </View>          
           </FullCardComponent>
         )
     });

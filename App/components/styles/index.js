@@ -173,7 +173,7 @@ export const FullCardComponentStyles =  StyleSheet.create({
   },
 
   fullCardTitleContainer: {
-    width: '90%',
+    width: '60%',
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'center',
@@ -193,12 +193,25 @@ export const FullCardComponentStyles =  StyleSheet.create({
     fontSize: 17,
     lineHeight: 17,
   },
-  cardBodyStyle: {
+  cardBodyStyleRow: {
     padding: 10,
+    paddingTop: 0,
     width: '100%',
     flex: 1,
     fontFamily: 'gotham-regular',
+    flexWrap: 'wrap',
     flexDirection: 'row',
+    flexWrap: 'nowrap',
+    justifyContent: 'flex-start',
+  },
+  cardBodyStyleColum: {
+    padding: 10,
+    paddingTop: 0,
+    width: '100%',
+    flex: 1,
+    fontFamily: 'gotham-regular',
+    flexWrap: 'wrap',
+    flexDirection: 'column',
     flexWrap: 'nowrap',
     justifyContent: 'flex-start',
   },

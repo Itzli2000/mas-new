@@ -2,6 +2,24 @@ import {  StyleSheet } from 'react-native';
 import { Colors, Metrics } from './../../../themes';
 
 export const HomeStyles =  StyleSheet.create({
+  fullCardTitleContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  cardIconStyles: {
+    marginLeft:15,
+    color: Colors.white,
+    fontSize: (Metrics.screenWidth <= 600 ? 23 : 30),
+  },
+  cardTitleStyles: {
+    paddingLeft:10,
+    fontFamily: 'gotham-bold',
+    color: Colors.white,
+    fontSize: (Metrics.screenWidth <= 600 ? 17 : 25),
+    height: 30,
+    lineHeight: 30,
+  },
 	homeCardInnerColumn: {
 		flexDirection: 'column',
 		justifyContent: 'space-around',
