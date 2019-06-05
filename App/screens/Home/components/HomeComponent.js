@@ -74,7 +74,7 @@ class HomeComponent extends Component {
           >
             <View style={[styles.homeCardInnerColumn, styles.homeCardInnerColumnLeft]}>
               <View style={styles.fullCardTitleContainer}>
-                <Icon style={styles.cardIconStyles} name={item.icon} /> 
+                <Icon style={[styles.cardIconStyles,styles.fixedIcon]} name={item.icon} /> 
                 <Text h4 style={styles.cardTitleStyles}>{item.key.toUpperCase()}</Text>
               </View>
                <Text style={styles.homeCardBody}>{'  '}{item.description}</Text>
@@ -82,7 +82,7 @@ class HomeComponent extends Component {
             <View style={[styles.homeCardInnerColumn, styles.homeCardInnerColumnRight]}>
               <ProgressCircle
                 percent={item.percentage}
-                radius={styles.screenWidth.width <= 600 ? 35 : 45}
+                radius={styles.screenWidth.width <= 600 ? 45 : 50}
                 borderWidth={10}
                 color="#3399FF" 
                 shadowColor="#cacbce"
@@ -107,11 +107,11 @@ class HomeComponent extends Component {
             startColor={styles.orangeStart.color}
             stopColor={styles.orangeStop.color}
           >
-              <View style={[{width: '90%'}, styles.fullCardTitleContainer]}>
-                <Icon style={styles.cardIconStyles} name={item.icon} /> 
+              <View style={[{paddingTop: 20}, styles.fullCardTitleContainer]}>
+                <Icon style={[styles.cardIconStyles]} name={item.icon} /> 
                 <Text h4 style={styles.cardTitleStyles}>{item.key.toUpperCase()}</Text>
               </View>
-            <View style={{flexDirection:'row'}}>
+            <View style={{flexDirection:'row', width: '90%'}}>
               <View style={[styles.homeCardInnerColumn, styles.homeCardInnerColumnLeft]}>
                <Text style={styles.homeCardBody}>{'  '}{item.description}</Text>
                <Text style={styles.homeCardBody}>{'  '}{item.description2}</Text>
