@@ -202,6 +202,7 @@ export const FullCardComponentStyles =  StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'nowrap',
     justifyContent: 'flex-start',
+    marginLeft: 10,
   },
   cardBodyStyleColum: {
     padding: 10,
@@ -213,6 +214,7 @@ export const FullCardComponentStyles =  StyleSheet.create({
     flexDirection: 'column',
     flexWrap: 'nowrap',
     justifyContent: 'flex-start',
+    marginLeft: 10,
   },
   fullCardBody: {
     fontSize: 15,
