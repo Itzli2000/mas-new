@@ -1,5 +1,4 @@
 import React, { Component } from 'react'; 
-import AnimatedBar from "react-native-animated-bar";
 import { UserCard, SignatureCard } from '@bm-mas-global-components';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import moment from "moment";

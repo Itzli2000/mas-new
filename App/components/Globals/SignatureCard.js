@@ -11,7 +11,6 @@ class SignatureCard extends Component {
 
   render() {
     const { props } = this;
-    console.log(props);
     const { children, startColor, endColor } = props;
     return (
       <View style={styles.cardContainer}>

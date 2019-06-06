@@ -5,22 +5,24 @@ export const HomeStyles =  StyleSheet.create({
   fullCardTitleContainer: {
     flexDirection: 'row',
     justifyContent: 'flex-start',
-    alignItems: 'flex-start',
+    alignItems: 'center',
   },
   cardIconStyles: {
     color: Colors.white,
-    fontSize: (Metrics.screenWidth <= 600 ? 20 : 30),
-    lineHeight: 25,
+    fontSize: (Metrics.screenWidth <= 600 ? 30 : 30),
+    lineHeight: 30,
   },
   fixedIcon: {
-    marginLeft:20,
+    marginLeft:18,
   },
   cardTitleStyles: {
+    flex: 1,
+    flexWrap: 'wrap',
     paddingLeft:10,
     fontFamily: 'gotham-bold',
     color: Colors.white,
     fontSize: (Metrics.screenWidth <= 600 ? 15 : 20),
-    lineHeight: (Metrics.screenWidth <= 600 ? 22 : 31),
+    lineHeight: (Metrics.screenWidth <= 600 ? 20 : 32),
     minHeight: 30,
   },
 	homeCardInnerColumn: {
@@ -45,10 +47,11 @@ export const HomeStyles =  StyleSheet.create({
 		color: '#000',
 	},
 	homeCardBody: {
-		fontSize: 15,
+		fontSize: 14,
     marginTop: 5,
+    paddingTop: 10,
     marginBottom: 5,
-		fontFamily: 'gotham-bold',
+		fontFamily: 'gotham-regular',
 		alignItems: 'center',
 		justifyContent: 'center',
 		color: Colors.white

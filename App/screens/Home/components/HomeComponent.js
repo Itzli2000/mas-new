@@ -88,7 +88,7 @@ class HomeComponent extends Component {
                 shadowColor="#cacbce"
                 bgColor="#fff"
               >
-                <Text style={{ fontSize: 18 }}>{item.percentage}</Text>
+                <Text style={{ fontSize: 24, fontFamily: 'gotham-bold' }}>{item.percentage}</Text>
               </ProgressCircle>
             </View>           
           </FullCardComponent>

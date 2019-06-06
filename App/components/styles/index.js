@@ -576,14 +576,14 @@ export const UserCardStyles =  StyleSheet.create({
     height: (Metrics.screenWidth <= 600 ? 100 : 120),
   },
   userCardDate: {
-    fontFamily: 'gotham-bold',
-    fontSize: (Metrics.screenWidth <= 600 ? 13 : 17),
+    fontFamily: 'gotham-regular',
+    fontSize: (Metrics.screenWidth <= 600 ? 12 : 15),
     color: Colors.white,
     textAlign: 'center',
   },
   userCardUserName: {
     marginBottom: (Metrics.screenWidth <= 600 ? 5 : 10),
-    fontSize: (Metrics.screenWidth <= 600 ? 17 : 20),
+    fontSize: (Metrics.screenWidth <= 600 ? 26 : 20),
     color: Colors.white,
     textAlign: 'center',
     fontFamily: 'gotham-bold',

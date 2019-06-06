@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {  View, Text, Image, TouchableOpacity } from 'react-native';
-import { CardComponentStyles as styles } from './../styles';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { LinearGradient } from 'expo';
+import { CardComponentStyles as styles } from './../styles';
 
 class CardComponent extends Component {
   constructor(props) {
