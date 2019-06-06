@@ -158,7 +158,7 @@ export const FullCardComponentStyles =  StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 10,
+    marginTop: 13,
   },
   fullCardContainerStyle: {
     width: '100%',
@@ -169,7 +169,6 @@ export const FullCardComponentStyles =  StyleSheet.create({
     alignItems: 'center',
     height: 'auto',
     minHeight: 130,
-    marginTop: 20,
   },
 
   fullCardTitleContainer: {

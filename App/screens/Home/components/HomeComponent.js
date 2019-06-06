@@ -111,15 +111,14 @@ class HomeComponent extends Component {
                 <Icon style={[styles.cardIconStyles]} name={item.icon} /> 
                 <Text h4 style={styles.cardTitleStyles}>{item.key.toUpperCase()}</Text>
               </View>
-            <View style={{flexDirection:'row', width: '90%'}}>
+            <View style={{flexDirection:'row'}}>
               <View style={[styles.homeCardInnerColumn, styles.homeCardInnerColumnLeft]}>
                <Text style={styles.homeCardBody}>{'  '}{item.description}</Text>
                <Text style={styles.homeCardBody}>{'  '}{item.description2}</Text>
                <Text style={styles.homeCardBody}>{'  '}{item.description3}</Text>
             </View>
-            <View style={[styles.homeCardInnerColumn, styles.homeCardInnerColumnRight]}>
+            <View style={[styles.homeCardInnerColumn, styles.homeCardInnerColumnRight,{paddingRight:10}]}>
               <AnimatedBar
-              style={styles.homeCardBodyProgress}
                 progress={item.percentage}
                 height={10}
                 borderColor="#DDD"

@@ -6,15 +6,15 @@ export const HomeStyles =  StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 10,
+    marginTop: 20,
   },
   cardIconStyles: {
     color: Colors.white,
     fontSize: (Metrics.screenWidth <= 600 ? 33 : 30),
     lineHeight: (Metrics.screenWidth <= 600 ? 35 : 32),
+    marginLeft: 5,
   },
   fixedIcon: {
-    marginLeft:15,
   },
   cardTitleStyles: {
     flex: 1,
@@ -22,7 +22,7 @@ export const HomeStyles =  StyleSheet.create({
     paddingLeft:10,
     fontFamily: 'gotham-bold',
     color: Colors.white,
-    fontSize: (Metrics.screenWidth <= 600 ? 15 : 20),
+    fontSize: (Metrics.screenWidth <= 600 ? 14 : 20),
     lineHeight: (Metrics.screenWidth <= 600 ? 20 : 32),
     minHeight: 30,
   },
@@ -33,12 +33,14 @@ export const HomeStyles =  StyleSheet.create({
 		paddingBottom: (Metrics.screenWidth <= 600 ? 5 : 15),
 	},
 	homeCardInnerColumnLeft: {
-		width: '60%',
+		width: '55%',
     justifyContent: 'space-around',
+    alignItems: 'flex-start',
 	},
 	homeCardInnerColumnRight: {
-		width: '40%',
+		width: '45%',
     justifyContent: 'space-around',
+    alignItems: 'center',
 	},
 	homeCardInnerFlatItem: {
 		padding: 5,
@@ -53,14 +55,10 @@ export const HomeStyles =  StyleSheet.create({
     paddingTop: 10,
     marginBottom: 5,
 		fontFamily: 'gotham-regular',
-		alignItems: 'center',
-		justifyContent: 'center',
-		color: Colors.white
+		alignItems: 'flex-start',
+		justifyContent: 'flex-start',
+		color: Colors.white,
 	},
-  homeCardBodyProgress: {
-    marginTop: 5,
-    marginBottom: 5,
-  },
   userCardfloatMenu:{
     width:'100%',
     height:'100%',
