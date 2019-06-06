@@ -108,10 +108,10 @@ class HomeComponent extends Component {
             stopColor={styles.orangeStop.color}
           >
               <View style={[styles.fullCardTitleContainer]}>
-                <Icon style={[styles.cardIconStyles,{paddingLeft:10}]} name={item.icon} /> 
+                <Icon style={[styles.cardIconStyles,{paddingLeft:10, marginLeft: 15}]} name={item.icon} /> 
                 <Text h4 style={styles.cardTitleStyles}>{item.key}</Text>
               </View>
-            <View style={{flexDirection:'row'}}>
+            <View style={{flexDirection:'row', paddingLeft:30}}>
               <View style={[styles.homeCardInnerColumn, styles.homeCardInnerColumnLeft]}>
                <Text style={styles.homeCardBody}>{'  '}{item.description}</Text>
                <Text style={styles.homeCardBody}>{'  '}{item.description2}</Text>
@@ -156,11 +156,11 @@ class HomeComponent extends Component {
         startColor={styles.greenStart.color}
         stopColor={styles.greenStop.color}
       >
-        <View style={[styles.fullCardTitleContainer,{marginTop: 10}]}>
+        <View style={[styles.fullCardTitleContainer,{marginTop: 10, marginLeft: 15}]}>
           <Icon style={[styles.cardIconStyles,{paddingLeft:10}]} name={'clock-o'} /> 
           <Text h4 style={styles.cardTitleStyles}>Pendientes</Text>
         </View>
-        <View style={{flexDirection:'row', paddingLeft:10}}>
+        <View style={{flexDirection:'row', paddingLeft:30}}>
           <View style={[styles.homeCardInnerColumn, styles.homeCardInnerColumnLeft]}>
            <Text style={styles.homeCardBody}>Tareas (3 de 10)</Text>
           </View>
