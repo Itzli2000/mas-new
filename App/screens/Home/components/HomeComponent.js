@@ -88,7 +88,7 @@ class HomeComponent extends Component {
                 shadowColor="#cacbce"
                 bgColor="#fff"
               >
-                <Text style={{ fontSize: 24, fontFamily: 'gotham-bold' }}>{item.percentage}</Text>
+                <Text style={{ fontSize: 26, fontFamily: 'gotham-bold' }}>{item.percentage}</Text>
               </ProgressCircle>
             </View>           
           </FullCardComponent>
@@ -107,7 +107,7 @@ class HomeComponent extends Component {
             startColor={styles.orangeStart.color}
             stopColor={styles.orangeStop.color}
           >
-              <View style={[{paddingTop: 20}, styles.fullCardTitleContainer]}>
+              <View style={[styles.fullCardTitleContainer]}>
                 <Icon style={[styles.cardIconStyles]} name={item.icon} /> 
                 <Text h4 style={styles.cardTitleStyles}>{item.key.toUpperCase()}</Text>
               </View>

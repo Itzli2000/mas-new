@@ -4,16 +4,17 @@ import { Colors, Metrics } from './../../../themes';
 export const HomeStyles =  StyleSheet.create({
   fullCardTitleContainer: {
     flexDirection: 'row',
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     alignItems: 'center',
+    marginTop: 10,
   },
   cardIconStyles: {
     color: Colors.white,
-    fontSize: (Metrics.screenWidth <= 600 ? 30 : 30),
-    lineHeight: 30,
+    fontSize: (Metrics.screenWidth <= 600 ? 33 : 30),
+    lineHeight: (Metrics.screenWidth <= 600 ? 35 : 32),
   },
   fixedIcon: {
-    marginLeft:18,
+    marginLeft:15,
   },
   cardTitleStyles: {
     flex: 1,
@@ -29,7 +30,6 @@ export const HomeStyles =  StyleSheet.create({
 		flexDirection: 'column',
 		justifyContent: 'space-around',
 		alignItems: 'center',
-		paddingTop: (Metrics.screenWidth <= 600 ? 5 : 15),
 		paddingBottom: (Metrics.screenWidth <= 600 ? 5 : 15),
 	},
 	homeCardInnerColumnLeft: {
@@ -47,6 +47,7 @@ export const HomeStyles =  StyleSheet.create({
 		color: '#000',
 	},
 	homeCardBody: {
+    flex: 1,
 		fontSize: 14,
     marginTop: 5,
     paddingTop: 10,
