@@ -187,34 +187,6 @@ export const ApplicationStyles =  StyleSheet.create({
   },
   // Capture image screen
   // Map screen
-  mapContainerSection: {
-    flex: 1,
-    marginTop: 0,
-    backgroundColor: Colors.userCardStart,
-    justifyContent:'center',
-    alignItems:'center',
-  },
-  mapBox: {
-    paddingLeft: 15,
-    paddingRight: 15,
-  },
-  placeStatusText: {
-    backgroundColor: Colors.white,
-    color: Colors.black,
-    marginLeft:15,
-    paddingLeft: 8,
-    borderRadius:10,
-    paddingRight: 20,
-    height: 20,
-    fontSize: 15,
-    lineHeight: 20,
-  },
-  placeStatusIcon: {
-    position: 'absolute',
-    right: 0,
-    top: 4,
-    paddingRight: 5,
-  },
   // Tasks screen
   tasksIconHeader: {
     width:30,

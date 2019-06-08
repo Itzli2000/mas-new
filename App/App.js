@@ -13,7 +13,8 @@ import SignatureScreen  from "@bm-mas-screens/Signature";
 import SurveyScreen  from "@bm-mas-screens/Survey";
 import TasksScreen  from "@bm-mas-screens/Tasks";
 import TasksActiveScreen  from "@bm-mas-screens/TasksActive";
-import VisitsMapScreen  from "@bm-mas-screens/Visits";
+import VisitsScreen  from "@bm-mas-screens/Visits";
+import VisitsMapScreen  from "@bm-mas-screens/VisitsMap";
 
 export class App extends Component {
   constructor(props) {

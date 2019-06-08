@@ -1,23 +1,18 @@
 'use strict';
 import React, { Component } from 'react';
 import { ScreenContainer } from '@bm-mas-global-components';
-import VisitsComponent from './components/VisitsComponent';
+import VisitsMapComponent from './components/VisitsMapComponent';
 import {
   Text,
 } from 'react-native';
 
-class VisitsScreen extends Component {
-
+class VisitsMapScreen extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       fontLoaded: false,
     };
-  }
-
-  checkIn = () => {
-    this.props.navigation.navigate('VisitasMapa');
   }
 
   async componentWillMount() {
@@ -35,10 +30,11 @@ class VisitsScreen extends Component {
     return (
       <ScreenContainer {...this.props}>
         { this.state.fontLoaded ? (
-          <VisitsComponent
+          <VisitsMapComponent
             {...this.props} 
-            checkIn={this.checkIn}
-            checkOut={this.checkOut}
+            hideMenu={this.hideMenu}
+            toogleMenu={this.toogleMenu} 
+            localState={this.state} 
           />
           ) : <Text >Loading....</Text> 
         }
@@ -47,4 +43,4 @@ class VisitsScreen extends Component {
   }
 }
 
-export default VisitsScreen;
+export default VisitsMapScreen;
