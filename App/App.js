@@ -8,8 +8,9 @@ import ChatScreen  from "@bm-mas-screens/Chat";
 import ImageCaptureScreen  from "@bm-mas-screens/ImageCapture";
 import NewSignatureScreen  from "@bm-mas-screens/NewSignature"; //Verificar componente firma
 import NotificationsScreen  from "@bm-mas-screens/Notifications";
-import PriceListScreen  from "@bm-mas-screens/PriceList"; //Error de compilacion
+import PriceListScreen  from "@bm-mas-screens/PriceList";
 import SignatureScreen  from "@bm-mas-screens/Signature";
+import SurveyScreen  from "@bm-mas-screens/Survey";
 
 export class App extends Component {
   constructor(props) {
@@ -20,7 +21,7 @@ export class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <NotificationsScreen />
+        <SurveyScreen />
       </View>
     );
   }

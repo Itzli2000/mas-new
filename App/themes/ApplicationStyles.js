@@ -146,58 +146,6 @@ export const ApplicationStyles =  StyleSheet.create({
     backgroundColor: 'red'
   },
   // Survey screen
-  surveyContainer: {
-    marginTop: 50,
-    backgroundColor: Colors.userCardStart,
-    paddingLeft: 15,
-    paddingRight: 15,
-    justifyContent:'center',
-    alignItems:'center',
-  },
-  surveyBox: {
-    width: '100%',
-    maxWidth: 300,
-  },
-  surveyTitle: {
-    fontSize: (Metrics.screenWidth <= 600 ? 20 : 30),
-    maxWidth: 270,
-    color: Colors.white,
-    textAlign: 'center',
-    marginTop: 15,
-    fontWeight: 'bold',
-    fontFamily: 'gotham-bold',
-  },
-  surveyObservations: {
-    fontSize: (Metrics.screenWidth <= 600 ? 17 : 25),
-    color: Colors.white,
-    textAlign: 'left',
-    marginTop: 15,
-    fontWeight: 'bold',
-    fontFamily: 'gotham-bold',
-  },
-  surveyCheck: {
-    backgroundColor: 'transparent',
-    borderColor: 'transparent',
-    width:250,
-  },
-  surveyCheckText: {
-    color: Colors.white,
-  },
-  surveyObservationsText: {
-    backgroundColor: Colors.white,
-    marginTop: 20,
-    marginBottom: 20,
-    borderRadius: 20,
-  },
-  surveyIconContainer: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  surveyIconStyles: {
-    padding:15,
-    color: Colors.white,
-    fontSize: (Metrics.screenWidth <= 600 ? 55 : 65),
-  },
   // Full card transparent styles
   
   // Visit screen styles
