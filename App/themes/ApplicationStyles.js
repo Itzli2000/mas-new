@@ -228,34 +228,6 @@ export const ApplicationStyles =  StyleSheet.create({
     marginRight:10,
   },
   // Tasks Active screen
-  taskActiveContainer: {
-    width: '100%',
-    minHeight: Metrics.screenHeight / 2,
-    flex: 1,
-    flexGrow: 1,
-    backgroundColor: Colors.greenStart,
-    textAlign: 'center',
-  },
-  taskActiveButton: {
-    width: '80%',
-    height: 40,
-    margin: 'auto',
-    alignSelf: 'center',
-    backgroundColor: Colors.white,
-    borderWidth: 1,
-    borderWidth: 0,
-    borderRadius: 10,
-    paddingLeft: 10,
-    paddingRight: 10,
-    marginTop: 20,
-    marginBottom: 30,
-  },
-  taskColumn: {
-    width: '45%',
-    justifyContent: 'center',
-    alignItems: 'center',
-    color: Colors.white,
-  }, 
   // Notifications styles
   // Signature styles
   // New signature styles
