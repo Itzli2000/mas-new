@@ -14,7 +14,7 @@ const notifications=[
     icon: 'check',
     iconColor: styles.colorGreen.color,
     title: 'Lorem ipsum dolor.',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing.',
+    subtitle: 'Lorem ipsum dolor sit amet',
   },
   {
     icon: 'user',
@@ -23,13 +23,13 @@ const notifications=[
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing.',
   },
   {
-    icon: 'shopping-cart',
+    icon: 'heart',
     iconColor: styles.colorRed.color,
     title: 'Lorem ipsum dolor.',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing.',
+    subtitle: 'Lorem ipsum dolor sit amet, consectetur',
   },
   {
-    icon: 'check',
+    icon: 'star',
     iconColor: styles.colorGreen.color,
     title: 'Lorem ipsum dolor.',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing.',

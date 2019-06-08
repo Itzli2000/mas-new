@@ -20,7 +20,7 @@ export class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <PriceListScreen />
+        <NotificationsScreen />
       </View>
     );
   }
