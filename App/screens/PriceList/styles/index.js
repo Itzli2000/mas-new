@@ -70,7 +70,7 @@ export const PriceListStyles = {
   orangeStart: { color: Colors.orangeStart },
   orangeStop: { color: Colors.orangeStop },
   userStart: { color: Colors.userCardStart },
-  userEnd: { color: Colors.userCardEnd },
+  userEnd: { color: Colors.userCardStop },
   green: { color: Colors.green },
   redStart: { color: Colors.startRed },
   redEnd: { color: Colors.endRed },

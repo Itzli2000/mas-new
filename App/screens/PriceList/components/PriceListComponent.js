@@ -54,7 +54,7 @@ const tasks=[
       icon3: 'file',
       icon3Color: styles.green.color,
     startColor: styles.userStart.color,
-    endColor: styles.userEnd.colo,
+    endColor: styles.userEnd.color,
   },
   {
     title: 'Montar Publicidad',
@@ -93,7 +93,7 @@ const tasks=[
       icon3: 'file',
       icon3Color: styles.green.color,
     startColor: styles.userStart.color,
-    endColor: styles.userEnd.colo,
+    endColor: styles.userEnd.color,
   },
 ]
 
@@ -120,6 +120,7 @@ class PriceListComponent extends Component {
   }
 
   render() {
+    console.log(styles);
     return (
         <UserCard {...this.props} userCardData={()=>this.renderUserCardData()}>
           <View style={[styles.categorieFloatSection, this.state.selectCategorie ? styles.CategorieShow : styles.CategorieHide]}>
