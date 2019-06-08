@@ -13,6 +13,7 @@ import SignatureScreen  from "@bm-mas-screens/Signature";
 import SurveyScreen  from "@bm-mas-screens/Survey";
 import TasksScreen  from "@bm-mas-screens/Tasks";
 import TasksActiveScreen  from "@bm-mas-screens/TasksActive";
+import VisitsMapScreen  from "@bm-mas-screens/Visits";
 
 export class App extends Component {
   constructor(props) {
@@ -23,7 +24,7 @@ export class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <TasksActiveScreen />
+        <VisitsMapScreen />
       </View>
     );
   }
