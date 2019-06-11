@@ -19,7 +19,11 @@ export const TasksActiveStyles = {
   },
   taskActiveContainer: {
     width: '100%',
-    minHeight: (Metrics.screenWidth <= 600 ? Metrics.screenHeight - 200 : Metrics.screenHeight - 250),
+    maxWidth: '94%',
+    margin: '3%',
+    marginTop: 15,
+    borderRadius: 5,
+    minHeight: (Metrics.screenWidth <= 600 ? Metrics.screenHeight - 220 : Metrics.screenHeight - 300),
     flex: 1,
     flexGrow: 1,
     backgroundColor: Colors.greenStart,
@@ -71,6 +75,6 @@ export const TasksActiveStyles = {
     backgroundColor: Colors.white,
     marginTop: 20,
     marginBottom: 20,
-    borderRadius: 20,
+    borderRadius: 5,
   },
 };
