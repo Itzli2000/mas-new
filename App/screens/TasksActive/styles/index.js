@@ -19,11 +19,16 @@ export const TasksActiveStyles = {
   },
   taskActiveContainer: {
     width: '100%',
-    minHeight: Metrics.screenHeight / 2,
+    minHeight: (Metrics.screenWidth <= 600 ? Metrics.screenHeight - 200 : Metrics.screenHeight - 250),
     flex: 1,
     flexGrow: 1,
     backgroundColor: Colors.greenStart,
     textAlign: 'center',
+  },
+  buttonTitle: {
+    color:'black', 
+    fontSize: (Metrics.screenWidth <= 600 ? 13 : 20),
+    padding: 5
   },
   taskActiveButton: {
     width: '80%',
@@ -37,7 +42,7 @@ export const TasksActiveStyles = {
     paddingLeft: 10,
     paddingRight: 10,
     marginTop: 20,
-    marginBottom: 30,
+    marginBottom: 10,
   },
   taskColumn: {
     width: '45%',
@@ -58,7 +63,7 @@ export const TasksActiveStyles = {
     fontSize: (Metrics.screenWidth <= 600 ? 17 : 25),
     color: Colors.white,
     textAlign: 'left',
-    marginTop: 15,
+    marginTop: 0,
     fontWeight: 'bold',
     fontFamily: 'gotham-bold',
   },

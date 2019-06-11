@@ -29,17 +29,22 @@ class TasksActiveComponent extends Component {
     return (
         <UserCard {...this.props} userCardData={()=>this.renderUserCardData()}>
           <View style={[styles.taskActiveContainer, styles.spaceElement]}>
-            <Button title='¿Estás seguro que quieres iniciar la tarea?' onPress={()=>{}} buttonStyle={styles.taskActiveButton} titleStyle={{color:'black'}} />
+            <Button 
+            title='¿Estás seguro que quieres iniciar la tarea?' 
+            onPress={()=>{}} buttonStyle={styles.taskActiveButton} 
+            titleStyle={styles.buttonTitle} 
+            />
             <View style={[styles.centered]}>
               <View style={styles.surveyBox}>
-              <Text  style={styles.surveyObservations}>Observaciones</Text>
-              <TextInput
-                style={styles.surveyObservationsText}
-                multiline={true}
-                numberOfLines={4}
-                onChangeText={(text) => this.setState({observations:text})}
-                value={this.state.observations}/>
+                <Text  style={styles.surveyObservations}>Observaciones</Text>
+                <TextInput
+                  style={styles.surveyObservationsText}
+                  multiline={true}
+                  numberOfLines={6}
+                  onChangeText={(text) => this.setState({observations:text})}
+                  value={this.state.observations}/>
               </View>
+            </View>
               <View style={[styles.row, styles.centered]}>
                 <TouchableOpacity activeOpacity = { .5 } onPress={()=>this.props.navigation.navigate('Captura')}>
                   <Icon style={styles.surveyIconStyles} name="camera" />
@@ -48,7 +53,6 @@ class TasksActiveComponent extends Component {
                   <Icon style={styles.surveyIconStyles} name="check-square"/>
                 </TouchableOpacity>
               </View>
-            </View>
           </View>
         </UserCard>
       );
