@@ -740,3 +740,35 @@ export const UserMenu =  StyleSheet.create({
   userDemo: Images.userDemo,
 });
 
+export const NewPhotoStyles = StyleSheet.create({
+  imageCaptureSection:{
+    position: 'absolute',
+    bottom: 0,
+    width: '90%',
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    paddingTop: 30,
+    marginLeft: '5%',
+    marginRight: '5%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: Colors.userCardStart,
+  },
+  imageCapturePhotoContainer:{
+    width: 150,
+    height: 150,
+    borderRadius: 50,
+    overflow: 'hidden',
+  },
+  imageCapturePhoto:{
+    width:150,
+    height:150,
+  },
+  imageCaptureDataContainer:{
+    width: '45%',
+    justifyContent:'center',
+    alignItems: 'center',
+  },
+  filterIcon: Images.filterIcon,
+  userDemo: Images.userDemo,
+});

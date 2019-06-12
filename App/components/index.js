@@ -9,6 +9,7 @@ import NotificationsCard from './Globals/NotificationsCard'
 import SignatureCard from './Globals/SignatureCard'
 import SubcategoriesSelector from './Globals/SubcategoriesSelector'
 import TransparentCard from './Globals/TransparentCard'
+import NewPhotoComponent from './Globals/NewPhotoComponent'
 
 export { 
   ScreenContainer, 
@@ -22,4 +23,5 @@ export {
   SignatureCard,
   SubcategoriesSelector,
   TransparentCard ,
+  NewPhotoComponent,
 }
