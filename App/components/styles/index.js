@@ -462,9 +462,9 @@ export const TransparentCardStyles =  StyleSheet.create({
   },
   transparentcardSubtitleStyles: {
     paddingLeft:50,
-    fontFamily: 'gotham-bold',
+    fontFamily: 'gotham-regular',
     color: Colors.black,
-    fontSize: (Metrics.screenWidth <= 600 ? 15 : 20),
+    fontSize: (Metrics.screenWidth <= 600 ? 12 : 18),
   },
   transparentCardIconStyles: {
     position: 'absolute',

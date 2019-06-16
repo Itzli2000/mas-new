@@ -32,7 +32,7 @@ class VisitsMapComponent extends Component {
           </View>
           <View style={[styles.mapContainerSection]}>
             <MapView
-              style={{height:300, width: '100%'}}
+              style={styles.mapView}
               initialRegion={{
                 latitude: 19.431818171564856,
                 longitude: -99.13371519816394,
@@ -50,6 +50,9 @@ class VisitsMapComponent extends Component {
                 value={this.state.observations}/>
               </View>
               <View style={[styles.row, styles.centered]}>
+                <TouchableOpacity activeOpacity = { .5 } onPress={()=>this.props.navigation.goBack()}>
+                  <Icon style={styles.surveyIconStyles} name="angle-double-left" />
+                </TouchableOpacity>
                 <TouchableOpacity activeOpacity = { .5 } onPress={()=>this.props.navigation.navigate('Captura')}>
                   <Icon style={styles.surveyIconStyles} name="camera" />
                 </TouchableOpacity>

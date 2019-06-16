@@ -14,6 +14,10 @@ export const VisitsStyles = {
   column:{
     flexDirection: 'column',
   },
+  floatRight: {
+    marginLeft: 'auto',
+    width: '80%',
+  },
   fullCardInnerColumn: {
     flexDirection: 'column',
     justifyContent: 'space-around',
@@ -28,7 +32,7 @@ export const VisitsStyles = {
     width: '40%',
   },
   transparentCardBody: {
-    fontSize: 17,
+    fontSize: 14,
     fontFamily: 'gotham-bold',
     alignItems: 'flex-start',
     justifyContent: 'center',
@@ -38,7 +42,48 @@ export const VisitsStyles = {
   transparentCardColumn: {
     width: '45%',
     flexDirection: 'column',
-    justifyContent: 'flex-start',
+    justifyContent: 'flex-end',
+  },
+  visitButton: {
+    height: 'auto',
+    margin: 'auto',
+    borderWidth: 0,
+    borderRadius: 5,
+    alignSelf: 'flex-start',
+  },
+  buttonTitle: {
+    fontSize: 15,
+    lineHeight: 16,
+  },
+  buttonGreen:{
+    backgroundColor: Colors.green,
+  },
+  buttonRed:{
+    backgroundColor: Colors.red,
+  },
+  visitTextIn:{
+    color: Colors.green,
+    fontSize: (Metrics.screenWidth <= 600 ? 15 : 18),
+  },
+  visitTextOut:{
+    color: Colors.red,
+    fontSize: (Metrics.screenWidth <= 600 ? 15 : 18),
+  },
+  visitTextComplete:{
+    backgroundColor: Colors.orange,
+    color: Colors.white,
+    width: 40,
+    height: 40,
+    marginLeft: 10,
+    textAlign: 'center',
+    borderRadius: 20,
+    alignSelf: 'flex-end',
+  },
+  visitCompleteIcon: {
+    fontSize: 22,
+    lineHeight: 40,
+    padding: 0,
+    margin: 0,
   },
   colorGray: { color: Colors.gray },
 };

@@ -31,6 +31,10 @@ export const VisitsMapStyles = {
     justifyContent:'center',
     alignItems:'center',
   },
+  mapView: {
+    height: 200, 
+    width: '100%',
+},
   mapBox: {
     paddingLeft: 15,
     paddingRight: 15,

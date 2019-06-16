@@ -40,10 +40,10 @@ class ImageCaptureComponent extends Component {
           <View style={styles.mainScreenContainer}>
           <DropdownMenu
             style={{flex: 1}}
-            bgColor={'white'}
-            tintColor={'#000000'}
-            activityTintColor={'#000000'} 
-            optionTextStyle={{color: '#000000'}}
+            bgColor={'#000000'}
+            tintColor={'#ccc6d0'}
+            activityTintColor={'#ccc6d0'} 
+            optionTextStyle={{color: '#ccc6d0'}}
             handler={(selection, row) => this.setState({text: data[selection][row]})}
             data={data}
           >
@@ -68,6 +68,9 @@ class ImageCaptureComponent extends Component {
                 value={this.state.observations}
               />
               <View style={[styles.row, styles.centered]}>
+                <TouchableOpacity activeOpacity = { .5 } onPress={()=>this.props.navigation.goBack()}>
+                  <Icon style={styles.surveyIconStyles} name="angle-double-left" />
+                </TouchableOpacity>
                 <TouchableOpacity activeOpacity = { .5 } onPress={()=>this.setState({ newPhoto: true })}>
                   <Icon style={styles.surveyIconStyles} name="camera" />
                 </TouchableOpacity>

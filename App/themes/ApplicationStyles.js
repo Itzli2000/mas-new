@@ -21,10 +21,6 @@ export const ApplicationStyles =  StyleSheet.create({
   spaceElement: {
     justifyContent: 'space-around',
   },
-  floatRight: {
-    marginLeft: 'auto',
-    width: '80%',
-  },
   darkPicker: {
     backgroundColor: Colors.black,
     color: Colors.white,
@@ -149,42 +145,6 @@ export const ApplicationStyles =  StyleSheet.create({
   // Full card transparent styles
   
   // Visit screen styles
-  visitButton: {
-    width: 100,
-    height: 40,
-    marginLeft: 10,
-    borderWidth: 0,
-    borderRadius: 5,
-  },
-  buttonGreen:{
-    backgroundColor: Colors.green,
-  },
-  buttonRed:{
-    backgroundColor: Colors.red,
-  },
-  visitTextIn:{
-    color: Colors.green,
-    fontSize: (Metrics.screenWidth <= 600 ? 15 : 18),
-  },
-  visitTextOut:{
-    color: Colors.red,
-    fontSize: (Metrics.screenWidth <= 600 ? 15 : 18),
-  },
-  visitTextComplete:{
-    backgroundColor: Colors.orange,
-    color: Colors.white,
-    width: 40,
-    height: 40,
-    marginLeft: 10,
-    textAlign: 'center',
-    borderRadius: 20,
-  },
-  visitCompleteIcon: {
-    fontSize: 22,
-    lineHeight: 40,
-    padding: 0,
-    margin: 0,
-  },
   // Capture image screen
   // Map screen
   // Tasks screen
