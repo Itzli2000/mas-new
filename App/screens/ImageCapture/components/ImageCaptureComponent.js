@@ -1,6 +1,7 @@
 import React, { Component } from 'react'; 
 import { UserCard, NewPhotoComponent } from '@bm-mas-global-components';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import DropdownMenu from 'react-native-dropdown-menu';
 import { ImageCaptureStyles as styles } from './../styles';
 import {
   View,
@@ -18,6 +19,8 @@ class ImageCaptureComponent extends Component {
     unitaryPrice: '',
     totalPrice: '',
     observations: '',
+    newPhoto: false,
+    text: '',
     };
   }
 
@@ -26,20 +29,24 @@ class ImageCaptureComponent extends Component {
     this.setState({ hasCameraPermission: status === 'granted' });
   }
 
+  hideComponent = () => {
+    this.setState({newPhoto: false});
+  }
+
   render() {
+    var data = [["Automotríz","Farmacia","Ferreteria","Papeleria","Construccion","Jardineria"],["Motores", "Option1"],["Precios","Option2"]];
     return (
         <UserCard {...this.props} userCardData={()=>this.renderUserCardData()}>
           <View style={styles.mainScreenContainer}>
-            <View style={[styles.row, styles.centered, styles.imageCaptureHeader]}>
-              <Image style={styles.captureIcon} source={styles.filterIcon} />
-              <Text style={styles.imageCaptureHeaderText}>Automotríz / Motores</Text>
-            </View>
-            <View style={styles.imageCaptureBreadcrumb}>
-              <View style={styles.imageCaptureIconContainer}>
-                <Icon name={"usd"} style={styles.imageCaptureIcon}/> 
-              </View>
-              <Text style={styles.imageCaptureIconText}>Precios</Text>
-            </View>
+          <DropdownMenu
+            style={{flex: 1}}
+            bgColor={'white'}
+            tintColor={'#000000'}
+            activityTintColor={'#000000'} 
+            optionTextStyle={{color: '#000000'}}
+            handler={(selection, row) => this.setState({text: data[selection][row]})}
+            data={data}
+          >
             <View style={styles.imageCaptureBodyContainer}>
               <Text style={styles.imageCaptureTitle}>{'Cera dura 200 ml'.toUpperCase()}</Text>
               <TextInput
@@ -60,9 +67,21 @@ class ImageCaptureComponent extends Component {
                 onChangeText={(text) => this.setState({observations:text})}
                 value={this.state.observations}
               />
+              <View style={[styles.row, styles.centered]}>
+                <TouchableOpacity activeOpacity = { .5 } onPress={()=>this.setState({ newPhoto: true })}>
+                  <Icon style={styles.surveyIconStyles} name="camera" />
+                </TouchableOpacity>
+                <TouchableOpacity activeOpacity = { .5 } onPress={()=>alert('Saving survey')}>
+                  <Icon style={styles.surveyIconStyles} name="check-square"/>
+                </TouchableOpacity>
+              </View>
             </View>
-            <NewPhotoComponent></NewPhotoComponent>
+          </DropdownMenu>
           </View>
+          <NewPhotoComponent
+            showNewPhoto={this.state.newPhoto}
+            hideNewPhoto={this.hideComponent}
+          />
         </UserCard>
       );
     }

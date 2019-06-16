@@ -516,7 +516,7 @@ export const UserCardStyles =  StyleSheet.create({
     position: 'relative',
   },
   mainScrollContent:{
-    flexGrow: 0, 
+    flexGrow: 1, 
     justifyContent: 'flex-start'
   },
   row:{
@@ -741,33 +741,99 @@ export const UserMenu =  StyleSheet.create({
 });
 
 export const NewPhotoStyles = StyleSheet.create({
+  column:{
+    flexDirection: 'column',
+  },
+  row:{
+    flexDirection: 'row',
+    width:'100%',
+    alignItems: 'center',
+  },
+  centered: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  componentContainer: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    bottom: 0,
+  },
+  photoON: {
+    width: '100%',
+    height: 300,
+    position: 'relative',
+    bottom: 0,
+    top: 0,
+    left: 0,
+  },
+  photoOff: {
+    width: '100%',
+    height: 0,
+    position: 'absolute',
+    bottom: 0,
+    top: 0,
+    left: -Metrics.screenWidth,
+  },
   imageCaptureSection:{
     position: 'absolute',
     bottom: 0,
     width: '90%',
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
-    paddingTop: 30,
+    borderTopLeftRadius: 5,
+    borderTopRightRadius: 5,
+    paddingTop: 20,
     marginLeft: '5%',
     marginRight: '5%',
+    paddingBottom: 20,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: Colors.userCardStart,
   },
   imageCapturePhotoContainer:{
-    width: 150,
-    height: 150,
+    width: 100,
+    height: 100,
     borderRadius: 50,
     overflow: 'hidden',
   },
   imageCapturePhoto:{
-    width:150,
-    height:150,
+    width:100,
+    height:100,
   },
   imageCaptureDataContainer:{
-    width: '45%',
+    width: '50%',
     justifyContent:'center',
     alignItems: 'center',
+  },
+  show: {
+    bottom: 0,
+  },
+  hide: {
+    bottom: -1 * Metrics.screenHeight,
+  },
+  buttonTitle: {
+    fontSize: 15,
+    lineHeight: 16,
+  },
+  visitButton: {
+    height: 'auto',
+    margin: 'auto',
+    borderWidth: 0,
+    borderRadius: 5,
+  },
+  buttonGreen:{
+    backgroundColor: Colors.green,
+  },
+  buttonRed:{
+    backgroundColor: Colors.red,
+  },
+  textDivider: {
+    height: 15,
+    borderColor: 'rgba(255,255,255,0)',
+    width: '90%',
+    margin: 'auto',
+    marginBottom: 15,
+    borderBottomColor: Colors.white,
+    borderWidth: 1,
   },
   filterIcon: Images.filterIcon,
   userDemo: Images.userDemo,

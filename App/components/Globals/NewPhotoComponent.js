@@ -22,7 +22,7 @@ class NewPhotoComponent extends Component {
   render() {
     const { props } = this;
     return (
-      <View>
+      <View style={[ styles.componentContainer ,props.showNewPhoto ? styles.show : styles.hide]}>
         <View style={styles.imageCaptureSection}>
           <View style={[styles.row, styles.pbDefault, styles.centered]}>
             <View style={[styles.imageCapturePhotoContainer]}>
@@ -34,9 +34,9 @@ class NewPhotoComponent extends Component {
                 />
             </View>
             <View style={[styles.column, styles.imageCaptureDataContainer]}>
-              <Button title='Tomar de nuevo' onPress={()=>this.setState({takePhoto: true})} buttonStyle={[styles.visitButton,styles.buttonGreen]} />
+              <Button title='Tomar de nuevo' onPress={()=>this.setState({takePhoto: true})} buttonStyle={[styles.visitButton,styles.buttonGreen]} titleStyle={styles.buttonTitle} />
               <Text style={styles.textDivider}></Text>
-              <Button title='Elmimnar' onPress={()=>this.setState({takePhoto: false})} buttonStyle={[styles.visitButton,styles.buttonRed]} />
+              <Button title='Eliminar' onPress={()=>props.hideNewPhoto()} buttonStyle={[styles.visitButton,styles.buttonRed]} titleStyle={styles.buttonTitle} />
             </View>
           </View>  
         </View>
@@ -46,7 +46,8 @@ class NewPhotoComponent extends Component {
               style={{
                 flex: 1,
                 backgroundColor: 'transparent',
-                flexDirection: 'row',
+                flexDirection: 'column',
+                justifyContent: 'flex-end',
               }}>
               <TouchableOpacity
                 style={{
@@ -64,6 +65,20 @@ class NewPhotoComponent extends Component {
                 <Text
                   style={{ fontSize: 18, marginBottom: 10, color: 'white' }}>
                   {' '}Flip{' '}
+                </Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={{
+                  flex: 0.1,
+                  alignSelf: 'flex-end',
+                  alignItems: 'center',
+                }}
+                onPress={() => {
+                  this.setState({ takePhoto: false });
+                }}>
+                <Text
+                  style={{ fontSize: 18, marginBottom: 10, color: 'white' }}>
+                  {' '}Cancelar{' '}
                 </Text>
               </TouchableOpacity>
             </View>

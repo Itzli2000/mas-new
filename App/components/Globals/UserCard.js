@@ -72,7 +72,7 @@ class UserCard extends Component {
           />
         </View>
         <ScrollView style={styles.mainScrollContainer} contentContainerStyle={styles.mainScrollContent}>
-			   <View style={{backgroundColor: (backColor ?  backColor : ' transparent '), flex: 1}}>
+			   <View style={{backgroundColor: (backColor ?  backColor : ' transparent '), flex: 1, position: 'relative', height: '100%'}}>
 			   	 <LinearGradient
 			          colors={[styles.userCardStart.color, styles.userCardStop.color]}
 			        >
