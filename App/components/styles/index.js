@@ -14,7 +14,7 @@ export const CardComponentStyles =  StyleSheet.create({
   cardContainerStyle: {
     maxWidth: 450,
     width: '90%',
-    borderRadius: 15,
+    borderRadius: 5,
     overflow: 'hidden',
     justifyContent: 'center',
     alignItems: 'center',
@@ -311,7 +311,7 @@ export const SignatureStyles =  StyleSheet.create({
   cardContainerStyle: {
     maxWidth: 450,
     width: '90%',
-    borderRadius: 15,
+    borderRadius: 5,
     overflow: 'hidden',
     justifyContent: 'center',
     alignItems: 'center',

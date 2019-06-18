@@ -1,5 +1,5 @@
 import React, { Component } from 'react'; 
-import { UserCard } from '@bm-mas-global-components';
+import { UserCard, NewPhotoComponent } from '@bm-mas-global-components';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { NewSignatureStyles as styles } from './../styles';
 import ExpoPixi from 'expo-pixi'
@@ -19,7 +19,12 @@ class NewSignatureComponent extends Component {
     responsable: '',
     area: '',
     observations: '',
+    newPhoto: false,
     };
+  }
+
+  hideComponent = () => {
+    this.setState({newPhoto: false});
   }
 
   render() {
@@ -54,7 +59,10 @@ class NewSignatureComponent extends Component {
                 onChangeText={(text) => this.setState({observations:text})}
                 value={this.state.observations}/>
               <View style={[styles.row, styles.centered, styles.newSignatureFooter]}>
-                <TouchableOpacity activeOpacity = { .5 } onPress={()=>this.props.navigation.navigate('Captura')}>
+                <TouchableOpacity activeOpacity = { .5 } onPress={()=>this.props.navigation.goBack()}>
+                  <Icon style={styles.surveyIconStyles} name="angle-double-left" />
+                </TouchableOpacity>
+                <TouchableOpacity activeOpacity = { .5 } onPress={()=>this.setState({ newPhoto: true })}>
                   <Icon style={styles.surveyIconStyles} name="camera" />
                 </TouchableOpacity>
                 <TouchableOpacity activeOpacity = { .5 } onPress={()=>alert('Saving survey')}>
@@ -63,6 +71,10 @@ class NewSignatureComponent extends Component {
               </View>
             </View>
           </View>
+          <NewPhotoComponent
+            showNewPhoto={this.state.newPhoto}
+            hideNewPhoto={this.hideComponent}
+          />
         </UserCard>
       );
     }

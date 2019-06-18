@@ -1,5 +1,5 @@
 import React, { Component } from 'react'; 
-import { UserCard } from '@bm-mas-global-components';
+import { UserCard, NewPhotoComponent } from '@bm-mas-global-components';
 import { CheckBox } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { SurveyStyles as styles } from './../styles';
@@ -24,7 +24,12 @@ class SurveyComponent extends Component {
     opt1: false,
     opt2: false,
     opt3: false,
+    newPhoto: false,
     };
+  }
+
+  hideComponent = () => {
+    this.setState({newPhoto: false});
   }
 
   render() {
@@ -107,7 +112,10 @@ class SurveyComponent extends Component {
                 value={this.state.observations}/>
               </View>
               <View style={[styles.row, styles.centered]}>
-                <TouchableOpacity activeOpacity = { .5 } onPress={()=>this.props.navigation.navigate('Captura')}>
+                <TouchableOpacity activeOpacity = { .5 } onPress={()=>this.props.navigation.goBack()}>
+                  <Icon style={styles.surveyIconStyles} name="angle-double-left" />
+                </TouchableOpacity>
+                <TouchableOpacity activeOpacity = { .5 } onPress={()=>this.setState({ newPhoto: true })}>
                   <Icon style={styles.surveyIconStyles} name="camera" />
                 </TouchableOpacity>
                 <TouchableOpacity activeOpacity = { .5 } onPress={()=>alert('Saving survey')}>
@@ -116,6 +124,10 @@ class SurveyComponent extends Component {
               </View>
             </View>
           </View>
+          <NewPhotoComponent
+            showNewPhoto={this.state.newPhoto}
+            hideNewPhoto={this.hideComponent}
+          />
         </UserCard>
       );
     }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { UserCard, TransparentCard } from '@bm-mas-global-components';
+import { UserCard, TransparentCard, NewPhotoComponent } from '@bm-mas-global-components';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import MapView from 'react-native-maps';
 import { VisitsMapStyles as styles } from './../styles';
@@ -17,7 +17,12 @@ class VisitsMapComponent extends Component {
     super(props);
     this.state = {
       observations: '',
+    newPhoto: false,
     }
+  }
+
+  hideComponent = () => {
+    this.setState({newPhoto: false});
   }
 
   render() {
@@ -53,7 +58,7 @@ class VisitsMapComponent extends Component {
                 <TouchableOpacity activeOpacity = { .5 } onPress={()=>this.props.navigation.goBack()}>
                   <Icon style={styles.surveyIconStyles} name="angle-double-left" />
                 </TouchableOpacity>
-                <TouchableOpacity activeOpacity = { .5 } onPress={()=>this.props.navigation.navigate('Captura')}>
+                <TouchableOpacity activeOpacity = { .5 } onPress={()=>this.setState({ newPhoto: true })}>
                   <Icon style={styles.surveyIconStyles} name="camera" />
                 </TouchableOpacity>
                 <TouchableOpacity activeOpacity = { .5 } onPress={()=>alert('Saving survey')}>
@@ -61,6 +66,10 @@ class VisitsMapComponent extends Component {
                 </TouchableOpacity>
               </View>
           </View>
+          <NewPhotoComponent
+            showNewPhoto={this.state.newPhoto}
+            hideNewPhoto={this.hideComponent}
+          />
         </UserCard>
       );
     }
