@@ -180,7 +180,11 @@ class HomeComponent extends Component {
 
   render() { 
     return (
-        <UserCard  {...this.props} userCardData={()=>this.renderUserCardData()}>
+        <UserCard  
+        {...this.props} 
+        userCardData={()=>this.renderUserCardData()}
+        observationsComponent="true"
+      >
           <View>
             {this.renderPendings()}
             {this.renderTaskList(tasks)}

@@ -32,7 +32,7 @@ class UserCard extends Component {
 
 	render() {
 		const{ props } = this;
-    const { children, backColor } = props;
+    const { children, backColor, observationsComponent } = props;
     console.log(this.state.menu, 'menu');
 		return (
 		  <View style={[styles.screenHeight.height, {flex:1}, this.state.menu ? styles.fixScreen : '']}>
@@ -97,6 +97,11 @@ class UserCard extends Component {
 					{children}
 			   </View>
 	      </ScrollView>
+        { observationsComponent ? 
+          <View style={{backgroundColor: 'white', justifyContent: 'center'}}>
+            <Text style={{textAlign: 'center'}}>Observaciones</Text> 
+          </View>
+          : null }
 		  </View>
 		);
 	}
