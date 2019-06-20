@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Image, TouchableOpacity, ScrollView, Text } from 'react-native';
-import { UserMenu } from '@bm-mas-global-components';
+import { UserMenu, TasksActiveComponent } from '@bm-mas-global-components';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import moment from "moment";
 import 'moment/locale/es';
@@ -14,7 +14,8 @@ class UserCard extends Component {
 	  super(props);
 	
     this.state = {
-      menu:false
+      menu:false,
+      showTask: false,
     };
 	}
 
@@ -29,11 +30,18 @@ class UserCard extends Component {
     this.setState({menu:false});
   }
 
+  showTaskFunction = () => {
+    this.setState({showTask:true});
+  }
+
+  hideTaskFunction = () => {
+    this.setState({showTask:false});
+  }
+
 
 	render() {
 		const{ props } = this;
     const { children, backColor, observationsComponent } = props;
-    console.log(this.state.menu, 'menu');
 		return (
 		  <View style={[styles.screenHeight.height, {flex:1}, this.state.menu ? styles.fixScreen : '']}>
 			  <View style={[styles.row, styles.topIcons]}>
@@ -71,6 +79,11 @@ class UserCard extends Component {
             localState={this.state} 
           />
         </View>
+        <TasksActiveComponent
+          {...this.props}
+          showTaskComponent={this.state.showTask}
+          hideTaskComponent={this.hideTaskFunction}
+        />
         <ScrollView style={styles.mainScrollContainer} contentContainerStyle={styles.mainScrollContent}>
 			   <View style={{backgroundColor: (backColor ?  backColor : ' transparent '), flex: 1, position: 'relative', height: '100%'}}>
 			   	 <LinearGradient
@@ -99,7 +112,9 @@ class UserCard extends Component {
 	      </ScrollView>
         { observationsComponent ? 
           <View style={{backgroundColor: 'white', justifyContent: 'center'}}>
+          <TouchableOpacity style={{marginLeft: 'auto'}} activeOpacity = { .5 } onPress={()=>this.showTaskFunction()}>
             <Text style={{textAlign: 'center'}}>Observaciones</Text> 
+          </TouchableOpacity>
           </View>
           : null }
 		  </View>

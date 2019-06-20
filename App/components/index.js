@@ -10,6 +10,7 @@ import SignatureCard from './Globals/SignatureCard'
 import SubcategoriesSelector from './Globals/SubcategoriesSelector'
 import TransparentCard from './Globals/TransparentCard'
 import NewPhotoComponent from './Globals/NewPhotoComponent'
+import TasksActiveComponent from './Globals/TaskActiveComponent'
 
 export { 
   ScreenContainer, 
@@ -24,4 +25,5 @@ export {
   SubcategoriesSelector,
   TransparentCard ,
   NewPhotoComponent,
+  TasksActiveComponent,
 }
