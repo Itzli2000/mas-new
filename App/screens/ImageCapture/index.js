@@ -1,6 +1,6 @@
 'use strict';
 import React, { Component } from 'react';
-import { ScreenContainer } from '@bm-mas-global-components';
+import ScreenContainer from '../../components/Globals/ScreenContainer';
 import ImageCaptureComponent from './components/ImageCaptureComponent';
 import { Text } from 'react-native';
 

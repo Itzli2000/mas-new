@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { UserCard, NewPhotoComponent } from '@bm-mas-global-components';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { NewSignatureStyles as styles } from './../styles';
-import ExpoPixi from 'expo-pixi'
+// import ExpoPixi from 'expo-pixi'
 import {
   View,
   Text,
@@ -33,12 +33,12 @@ class NewSignatureComponent extends Component {
           <View style={[styles.newSignatureContainer]}>
             <View style={[styles.centered]}>
               <Text  style={styles.newSignatureTitle}>Ingresa Firma</Text>
-              <ExpoPixi.Signature
+              {/* <ExpoPixi.Signature
                 style={styles.newSignatureCanvas}
                 ref='signatureCanvas' //Important to be able to call this obj
                 strokeWidth={3} // thickness of the brush
                 strokeAlpha={0.5} // opacity of the brush
-              />
+              /> */}
               <TextInput
                 placeholder={"Responsable"}
                 style={styles.newSignatureInput}

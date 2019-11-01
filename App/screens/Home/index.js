@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ScreenContainer } from '@bm-mas-global-components';
+import ScreenContainer from '../../components/Globals/ScreenContainer';
 import HomeComponent from './components/HomeComponent';
 import { Text } from 'react-native'; 
 
