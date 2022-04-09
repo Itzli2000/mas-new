@@ -10,7 +10,7 @@
     "accordion-collapse-react-native": "^0.1.10",
     "browser-polyfill": "^3.20.2",
     "expo": "^33.0.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "react": "16.8.3",
     "react-native": "https://github.com/expo/react-native/archive/sdk-33.0.0.tar.gz",
     "react-native-animated-bar": "^0.2.0",
